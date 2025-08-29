@@ -85,6 +85,53 @@ function Header1() {
               className="academics_drop pt-4 top-[49px] font-extralight absolute hidden peer-hover:flex hover:flex w-[240px]
                 flex-col bg-white drop-shadow-lg rounded-md delay-[2s] gap-4"
             >
+
+              {/* NEW MENUS */}
+
+                <a href="/pdfs/Calendar2025-26.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                target="_blank"
+                rel="noopener noreferrer">
+                  <li className="menu-item cursor-pointer ps-2 hover:text-white flex mb-[-16px]">
+                    Academic Calendar 2025-26
+                  </li>
+                </a>
+                <hr />
+
+                <a href="/pdfs/Newsletter.pdf#toolbar=0&navpanes=0&scrollbar=0" target="_blank"
+                rel="noopener noreferrer">
+                  <li className="menu-item cursor-pointer ps-2 hover:text-white flex mb-[-16px]">
+                    NEWSLETTER
+                  </li>
+                </a>
+                <hr />
+                
+                <a href="/pdfs/Handbook-for-Teachers.pdf#toolbar=0&navpanes=0&scrollbar=0" target="_blank"
+                rel="noopener noreferrer">
+                  <li className="menu-item cursor-pointer ps-2 hover:text-white flex mb-[-16px]">
+                    TEACHER'S HANDBOOK
+                  </li>
+                </a>
+                <hr />
+                <a href="/pdfs/NEP2020.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                target="_blank"
+                rel="noopener noreferrer">
+               <li className="menu-item cursor-pointer ps-2 hover:text-white flex mb-[-16px]">
+                NEP 2020
+              </li>
+                </a>
+                <hr />
+                <a href="/pdfs/National-Curricculam-Framework 2023.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                target="_blank"
+                rel="noopener noreferrer">
+               <li className="menu-item cursor-pointer ps-2 hover:text-white flex mb-[-16px]">
+                 NCF 2023
+              </li>
+                </a>
+                <hr />
+
+           
+
+              {/* OLD MENUS */}
               <NavLink to={"/academics/faculty-&-curriculum"}>
                 <li className="menu-item cursor-pointer ps-2 hover:text-white flex mb-[-16px]">
                   FACULTY & CURRICULUM
@@ -236,6 +283,17 @@ function Header1() {
               className="fee_payment_drop pt-3 top-[49px] font-extralight uppercase absolute hidden peer-hover:flex hover:flex w-[220px]
                 flex-col bg-white drop-shadow-lg rounded-md delay-[2s] gap-4"
             >
+                <a
+                href="/pdfs/PTA 2025-26.docx#toolbar=0&navpanes=0&scrollbar=0"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <li className="menu-item cursor-pointer ps-2 flex mb-[-16px]  hover:text-white leading-none">
+                  PTA 2025-26
+                </li>
+              </a>
+              <hr />
+               
                <a
                 href="/pdfs/Sexual-Harassment-Committee-GDGOENKA.pdf#toolbar=0&navpanes=0&scrollbar=0"
                 target="_blank"
@@ -433,7 +491,7 @@ function Header1() {
         </div>
 
         <div className="scrollSidebar">
-          {/* ABOUT ACCORDIAN */}
+          {/* ABOUT ACCORDIAN MOBILE*/}
           <Accordion>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
@@ -475,7 +533,7 @@ function Header1() {
             </AccordionDetails>
           </Accordion>
 
-          {/* ACADEMICS ACCORDIAN */}
+          {/* ACADEMICS ACCORDIAN MOBILE */}
           <Accordion>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
@@ -487,6 +545,54 @@ function Header1() {
             </AccordionSummary>
             <AccordionDetails>
               <ul className="mt-[-16px]">
+                <a href="/pdfs/Calendar2025-26.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                target="_blank"
+                rel="noopener noreferrer">
+                  <li className="menu-item cursor-pointer mb-[6px] ms-[-4px] uppercase">
+                    academic Calendar 2025-26
+                  </li>
+                </a>
+                <hr />
+
+                  <a href="/pdfs/Newsletter.pdf#toolbar=0&navpanes=0&scrollbar=0" target="_blank"
+                rel="noopener noreferrer">
+                  <li className="menu-item cursor-pointer mb-[-4px] ms-[-4px] uppercase">
+                  newsletters
+                  </li>
+                </a>
+                <hr />
+                
+                <a href="/pdfs/Handbook-for-Teachers.pdf#toolbar=0&navpanes=0&scrollbar=0" target="_blank"
+                rel="noopener noreferrer">
+                  <li className="menu-item cursor-pointer mb-[-4px] ms-[-4px] uppercase">
+                    TEACHER'S HANDBOOK
+                  </li>
+                </a>
+                <hr />
+                <a href="/pdfs/NEP2020.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                target="_blank"
+                rel="noopener noreferrer">
+                  <li className="menu-item cursor-pointer mb-[-4px] ms-[-4px] uppercase">
+                NEP 2020
+              </li>
+                </a>
+                <hr />
+                <a href="/pdfs/National-Curricculam-Framework 2023.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                target="_blank"
+                rel="noopener noreferrer">
+                  <li className="menu-item cursor-pointer mb-[-4px] ms-[-4px] uppercase">
+                 NCF 2023
+              </li>
+                </a>
+                <hr />
+
+                <NavLink to={"/academics/faculty-&-curriculum"}>
+                  {" "}
+                  <li className="menu-item cursor-pointer mb-[-4px] ms-[-4px] uppercase">
+                    faculty & curriculum
+                  </li>
+                </NavLink>
+                <hr />
                 <NavLink to={"/academics/faculty-&-curriculum"}>
                   {" "}
                   <li className="menu-item cursor-pointer mb-[-4px] ms-[-4px] uppercase">
@@ -546,7 +652,7 @@ function Header1() {
             </AccordionDetails>
           </Accordion>
 
-          {/* OUR CAMPUS ACCORDIAN */}
+          {/* OUR CAMPUS ACCORDIAN MOBILE */}
           <Accordion>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
@@ -575,7 +681,7 @@ function Header1() {
             </AccordionDetails>
           </Accordion>
 
-          {/* CAREER ACCORDIAN */}
+          {/* CAREER ACCORDIAN MOBILE */}
           <Accordion>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
@@ -597,7 +703,7 @@ function Header1() {
             </AccordionDetails>
           </Accordion>
 
-          {/* ERP ACCORDIAN */}
+          {/* ERP ACCORDIAN MOBILE*/}
           <Accordion>
             <a
               href="https://gdgaligarh.gdgoenka.com/Index"
@@ -614,7 +720,7 @@ function Header1() {
             </a>
           </Accordion>
 
-          {/* FEE PAYMENT */}
+          {/* FEE PAYMENT MOBILE */}
           <Accordion>
             <a
               href="https://smartpay.easebuzz.in/75872/AdmissionFee"
@@ -631,7 +737,7 @@ function Header1() {
             </a>
           </Accordion>
 
-          {/* BEYOND ACADEMICS ACCORDIAN */}
+          {/* BEYOND ACADEMICS ACCORDIAN MOBILE */}
           <Accordion>
             <NavLink to={"/beyond-academics"}>
               <AccordionSummary
@@ -644,7 +750,7 @@ function Header1() {
             </NavLink>
           </Accordion>
 
-          {/* ALUMNI ACCORDIAN */}
+          {/* ALUMNI ACCORDIAN MOBILE*/}
           <Accordion>
             <AccordionSummary
               aria-controls="panel1-content"
@@ -655,7 +761,7 @@ function Header1() {
             </AccordionSummary>
           </Accordion>
 
-          {/* Routine  */}
+          {/* Routine mobile*/}
 
           <Accordion>
             <AccordionSummary
@@ -713,7 +819,7 @@ function Header1() {
             </AccordionDetails>
           </Accordion>
 
-          {/* committee  */}
+          {/* committee mobile */}
           <Accordion>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
@@ -725,12 +831,24 @@ function Header1() {
             </AccordionSummary>
             <AccordionDetails>
               <ul>
+
+                 <a
+                href="/pdfs/PTA 2025-26.docx#toolbar=0&navpanes=0&scrollbar=0"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <li className="menu-item cursor-pointer ps-1 flex mt-[-16px] ms-[-4px] uppercase">
+                  PTA 2025-26
+                </li>
+              </a>
+              <hr />
+
               <a
                 href="/pdfs/Sexual-Harassment-Committee-GDGOENKA.pdf#toolbar=0&navpanes=0&scrollbar=0"
                 target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <li className="menu-item cursor-pointer ps-1 flex mt-[-16px] ms-[-4px] uppercase">
+                  <li className="menu-item cursor-pointer ps-1 flex mt-[6px] ms-[-4px] uppercase">
                    Harassment Committee
                   </li>
                 </a>
@@ -751,7 +869,7 @@ function Header1() {
           </Accordion>
 
 
-          {/* ADMISSION ACCORDIAN */}
+          {/* ADMISSION ACCORDIAN mobile*/}
 
           <Accordion>
             <AccordionSummary
