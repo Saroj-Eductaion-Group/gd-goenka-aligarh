@@ -1,0 +1,834 @@
+/* HouseSystem.css - Complete CSS with 2 Cards per Row */
+
+.house-system-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* Banner Styles */
+.house-banner {
+  height: 70vh;
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-background {
+  width: 100%;
+  height: 100%;
+  background: url('../assets/housebanner1.webp') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.banner-content {
+  text-align: center;
+  color: white;
+  z-index: 2;
+  position: relative;
+  padding: 0 20px;
+  max-width: 800px;
+}
+
+.banner-title {
+  font-size: 4.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+  line-height: 1.2;
+  color: white;
+}
+
+.banner-subtitle {
+  font-size: 2.2rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.banner-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.banner-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  animation: float 6s ease-in-out infinite;
+}
+
+.banner-circle:nth-child(1) {
+  width: 120px;
+  height: 120px;
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.banner-circle:nth-child(2) {
+  width: 80px;
+  height: 80px;
+  bottom: 15%;
+  right: 20%;
+  animation-delay: 2s;
+}
+
+.banner-circle:nth-child(3) {
+  width: 150px;
+  height: 150px;
+  top: 60%;
+  left: 5%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+/* Introduction Section */
+.introduction-section {
+  padding: 100px 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  position: relative;
+}
+
+.introduction-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2, #667eea);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.intro-content {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.intro-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: #4a5568;
+  text-align: justify;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #667eea;
+  transition: all 0.3s ease;
+}
+
+.intro-content p:hover {
+  transform: translateX(5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.houses-highlight {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.houses-highlight::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  animation: sparkle 20s linear infinite;
+}
+
+.houses-highlight h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.houses-highlight p {
+  font-size: 1.3rem;
+  opacity: 0.95;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 0;
+}
+
+@keyframes sparkle {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  100% { transform: translate(-20px, -20px) rotate(360deg); }
+}
+
+/* Houses Grid Section */
+.houses-grid-section {
+  padding: 100px 0;
+  background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+  position: relative;
+}
+
+.houses-grid-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #667eea, transparent);
+}
+
+.houses-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Changed to always show 2 cards per row */
+  gap: 2.5rem;
+  margin-top: 4rem;
+}
+
+.house-card {
+  background: linear-gradient(145deg, #ffffff, #f7fafc);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  position: relative;
+}
+
+.house-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.house-card:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.15),
+    0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.house-card:hover::before {
+  opacity: 1;
+}
+
+.house-header {
+  padding: 0;
+  position: relative;
+}
+
+.house-color-strip {
+  height: 10px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.house-color-strip::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: left 0.6s ease;
+}
+
+.house-card:hover .house-color-strip::after {
+  left: 100%;
+}
+
+.house-title-section {
+  padding: 2rem 2rem 1.5rem;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.house-title-section h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: #2d3748;
+  background: linear-gradient(45deg, #2a3c7e, #667eea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.house-tagline {
+  font-style: italic;
+  color: #718096;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.house-content {
+  padding: 0 2rem 2rem;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.house-content p {
+  margin-bottom: 1.2rem;
+  line-height: 1.7;
+  color: #4a5568;
+  font-size: 1.05rem;
+  text-align: justify;
+}
+
+.house-footer {
+  padding: 1.5rem 2rem;
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.color-indicator {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 3px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.house-card:hover .color-indicator {
+  transform: scale(1.2) rotate(15deg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.house-symbol {
+  font-size: 2rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  transition: all 0.3s ease;
+}
+
+.house-card:hover .house-symbol {
+  transform: scale(1.3) rotate(-10deg);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+/* Values Section */
+.values-section {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.values-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.05)" points="0,1000 1000,0 1000,1000"/></svg>');
+}
+
+.values-content h3 {
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 4rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 2;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.value-item {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.value-item:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 1);
+}
+
+.value-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  transition: all 0.3s ease;
+}
+
+.value-item:hover .value-icon {
+  transform: scale(1.2) rotate(5deg);
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.2));
+}
+
+.value-item h4 {
+  font-size: 1.5rem;
+  color: #2a3c7e;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+}
+
+.value-item p {
+  color: #4a5568;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .banner-title {
+    font-size: 3rem;
+  }
+  
+  .banner-subtitle {
+    font-size: 1.6rem;
+  }
+  
+  .houses-grid {
+    grid-template-columns: 1fr; /* Mobile pe 1 card per row */
+    gap: 2rem;
+  }
+  
+  .introduction-section,
+  .houses-grid-section,
+  .values-section {
+    padding: 60px 0;
+  }
+  
+  .house-banner {
+    height: 60vh;
+    min-height: 400px;
+  }
+  
+  .intro-content p {
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+  
+  .values-content h3 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-title {
+    font-size: 2.2rem;
+  }
+  
+  .banner-subtitle {
+    font-size: 1.3rem;
+  }
+  
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+  
+  .houses-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .house-card {
+    margin: 0 10px;
+  }
+}
+
+/* Scroll animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.house-card, .value-item, .intro-content p {
+  animation: fadeInUp 0.6s ease-out;
+}
+/* CCA Committee Section Styles */
+.cca-committee-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.cca-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.cca-title {
+  font-size: 2.5rem;
+  color: #2a3c7e;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.cca-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.committee-structure {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Top Committee (Principal, CCA Coordinator, Vice Principal) */
+.committee-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.principal-card,
+.coordinator-card,
+.vice-principal-card {
+  flex: 1;
+  min-width: 250px;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.principal-card:hover,
+.coordinator-card:hover,
+.vice-principal-card:hover {
+  transform: translateY(-5px);
+}
+
+.principal-card {
+  border-top: 5px solid #2a3c7e;
+}
+
+.coordinator-card {
+  border-top: 5px solid #dc3545;
+}
+
+.vice-principal-card {
+  border-top: 5px solid #28a745;
+}
+
+.role-badge {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.principal-badge {
+  background: #2a3c7e;
+  color: white;
+}
+
+.coordinator-badge {
+  background: #dc3545;
+  color: white;
+}
+
+.vice-principal-badge {
+  background: #28a745;
+  color: white;
+}
+
+.role-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+/* Houses Grid in Committee */
+.committee-houses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.committee-house-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.committee-house-card:hover {
+  transform: translateY(-5px);
+}
+
+.committee-house-header {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.committee-house-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+  color: #333;
+}
+
+.committee-house-content {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.house-incharge {
+  margin-bottom: 1.5rem;
+}
+
+.incharge-label {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.incharge-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2a3c7e;
+  margin: 0;
+}
+
+.house-members {
+  margin-top: 1rem;
+}
+
+.members-label {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.member-name {
+  font-size: 1rem;
+  color: #555;
+  margin: 0.3rem 0;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.member-name:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #2a3c7e;
+}
+
+/* Co-Scholastic Section */
+.co-scholastic-section {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.co-scholastic-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.co-scholastic-title {
+  font-size: 1.4rem;
+  color: #2a3c7e;
+  margin: 0;
+  font-weight: 700;
+}
+
+.co-scholastic-members {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.co-scholastic-member {
+  background: #f8f9fa;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #2a3c7e;
+}
+
+.member-text {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* PDF Document Section Styles */
+.pdf-document-section {
+  padding: 5rem 0;
+  background-color: #f8f9fa;
+}
+
+.pdf-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.pdf-title {
+  font-size: 2.5rem;
+  color: #2a3c7e;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.pdf-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.pdf-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 1px solid #eaeaea;
+}
+
+.pdf-wrapper {
+  position: relative;
+  height: 80vh;
+  width: 100%;
+}
+
+.pdf-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.pdf-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .committee-top {
+    flex-direction: column;
+  }
+  
+  .principal-card,
+  .coordinator-card,
+  .vice-principal-card {
+    min-width: 100%;
+  }
+  
+  .committee-houses-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .cca-title,
+  .pdf-title {
+    font-size: 2rem;
+  }
+  
+  .pdf-wrapper {
+    height: 70vh;
+  }
+}
+
+@media (max-width: 576px) {
+  .committee-houses-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .co-scholastic-members {
+    flex-direction: column;
+  }
+  
+  .pdf-wrapper {
+    height: 60vh;
+  }
+}
