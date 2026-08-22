@@ -1,76 +1,90 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
+
+// Eagerly load Home page for instant initial first paint
 import Home from "./pages/Home";
-import PrincipalMessage from "./pages/PrincipalMessage";
-import ManagementPage from "./pages/ManagementPage";
-import VisionAndMission from "./pages/VisionAndMission";
-import FacultyAndCurriculum from "./pages/FacultyAndCurriculum";
-import TeachingMethodology from "./pages/TeachingMethodology";
-import IgnitingMindsPage from "./pages/IgnitingMindsPage";
-import CompetitionAwards from "./pages/CompetitionAwards";
-import BookSeller from "./pages/BookSeller";
-import BeyondAcademics from "./pages/BeyondAcademics";
-import ClassInfrastructure from "./pages/ClassInfrastructure";
-import LabsAndLibrary from "./pages/LabsAndLibrary";
-import Activities from "./pages/Activities";
-import ImageGallery from "./pages/ImageGallery";
-import ContactForm from "./pages/ContactForm";
-import MandatoryDisclosure from "./pages/MandatoryDisclosure";
-import GoenkanPursuits from "./pages/GoenkanPursuits";
-import FeeStructure from "./pages/FeeStructure";
-import AdmissionForm from "./pages/AdmissionForm";
-import CurrentOpening from "./pages/CurrentOpening";
-import JobApplicationForm from "./pages/JobApplicationForm";
-import RecognisationCet from "./pages/Recognisation-Cet-Nur-to-8";
-// Admin Imports
-import { Dashboard } from "./admin/Dashboard";
-import { AdminLogin } from "./admin/pages/auth/AdminLogin";
-import { ForgotPassword } from "./admin/pages/auth/ForgotPassword";
-import { Error404 } from "./pages/Error404";
-import { ViewContact } from "./admin/pages/contact/ViewContact";
-import { AddJob } from "./admin/pages/job/AddJob";
-import { ViewJob } from "./admin/pages/job/ViewJob";
+
+// Route wrappers & context providers
 import PrivateRoute from "./admin/components/PrivateRoute";
-import { ViewAddmission } from "./admin/pages/admission/ViewAddmission";
-import { ViewAdmissionApplication } from "./admin/pages/admissionApplication/ViewAdmissionApplication";
-import { AddGallery } from "./admin/pages/gallery/AddGallery";
-import { ViewGallery } from "./admin/pages/gallery/ViewGallery";
-import { AddFaculty } from "./admin/pages/faculty/AddFaculty";
-import { ViewFaculty } from "./admin/pages/faculty/ViewFaculty";
-import { ViewJobApplication } from "./admin/pages/jobApplication/ViewJobApplication";
-import { ViewContent } from "./admin/pages/content/ViewContent";
-import { AddContent } from "./admin/pages/content/AddContent";
-import { ViewAdmissionApplicationQuery } from "./admin/pages/admissionApplicationQuery/ViewAdmissionApplicationQuery";
-
-// User Import
-import AdmissionSubmission from "./pages/AdmissionSubmission";
 import UserPrivateRoute from "./user/components/UserPrivateRoute";
-import { ViewUser } from "./admin/pages/user/ViewUser";
-import { AddUser } from "./admin/pages/user/AddUser";
-import { UserDashboard } from "./user/UserDashboard";
-import { UserForgotPassword } from "./user/auth/UserForgetPassword";
 import { FormProvider } from "./user/forms/FormContext";
-import QueryForm from "./user/forms/QueryForm";
-import PaymentFailure from "./user/payment/PaymentFailure";
-import PaymentSuccess from "./user/payment/PaymentSuccess";
-import { MultiStepForm } from "./user/route/MultStepForm";
-import PaymentSummary from "./user/payment/PaymentSummary";
-import { ViewPaymentTransaction } from "./admin/pages/paymentTransaction/ViewPaymentTransaction";
 
-import { StudentDataPdf } from "./user/submittedData/StudentDataPdf";
-import { PaymentReceipt } from "./user/payment/PaymentReceipt";
-import FacultyPage from "./pages/FacultyPage";
-import AgeCriteria from "./pages/AgeCriteria";
-import InNews from "./pages/InNews";
-import HouseSystem from "./pages/HouseSystem";
-import HolidayEngagement2026 from "./pages/HolidayEngagement2026";
+// Lazy-loaded Public Pages
+const PrincipalMessage = lazy(() => import("./pages/PrincipalMessage"));
+const ManagementPage = lazy(() => import("./pages/ManagementPage"));
+const VisionAndMission = lazy(() => import("./pages/VisionAndMission"));
+const FacultyAndCurriculum = lazy(() => import("./pages/FacultyAndCurriculum"));
+const TeachingMethodology = lazy(() => import("./pages/TeachingMethodology"));
+const IgnitingMindsPage = lazy(() => import("./pages/IgnitingMindsPage"));
+const CompetitionAwards = lazy(() => import("./pages/CompetitionAwards"));
+const BookSeller = lazy(() => import("./pages/BookSeller"));
+const BeyondAcademics = lazy(() => import("./pages/BeyondAcademics"));
+const ClassInfrastructure = lazy(() => import("./pages/ClassInfrastructure"));
+const LabsAndLibrary = lazy(() => import("./pages/LabsAndLibrary"));
+const Activities = lazy(() => import("./pages/Activities"));
+const ImageGallery = lazy(() => import("./pages/ImageGallery"));
+const ContactForm = lazy(() => import("./pages/ContactForm"));
+const MandatoryDisclosure = lazy(() => import("./pages/MandatoryDisclosure"));
+const GoenkanPursuits = lazy(() => import("./pages/GoenkanPursuits"));
+const FeeStructure = lazy(() => import("./pages/FeeStructure"));
+const AdmissionForm = lazy(() => import("./pages/AdmissionForm"));
+const CurrentOpening = lazy(() => import("./pages/CurrentOpening"));
+const JobApplicationForm = lazy(() => import("./pages/JobApplicationForm"));
+const RecognisationCet = lazy(() => import("./pages/Recognisation-Cet-Nur-to-8"));
+const AdmissionSubmission = lazy(() => import("./pages/AdmissionSubmission"));
+const FacultyPage = lazy(() => import("./pages/FacultyPage"));
+const AgeCriteria = lazy(() => import("./pages/AgeCriteria"));
+const InNews = lazy(() => import("./pages/InNews"));
+const HouseSystem = lazy(() => import("./pages/HouseSystem"));
+const HolidayEngagement2026 = lazy(() => import("./pages/HolidayEngagement2026"));
+const Error404 = lazy(() => import("./pages/Error404").then((m) => ({ default: m.Error404 })));
+
+// Lazy-loaded Admin Components
+const Dashboard = lazy(() => import("./admin/Dashboard").then((m) => ({ default: m.Dashboard })));
+const AdminLogin = lazy(() => import("./admin/pages/auth/AdminLogin").then((m) => ({ default: m.AdminLogin })));
+const ForgotPassword = lazy(() => import("./admin/pages/auth/ForgotPassword").then((m) => ({ default: m.ForgotPassword })));
+const ViewContact = lazy(() => import("./admin/pages/contact/ViewContact").then((m) => ({ default: m.ViewContact })));
+const AddJob = lazy(() => import("./admin/pages/job/AddJob").then((m) => ({ default: m.AddJob })));
+const ViewJob = lazy(() => import("./admin/pages/job/ViewJob").then((m) => ({ default: m.ViewJob })));
+const ViewAddmission = lazy(() => import("./admin/pages/admission/ViewAddmission").then((m) => ({ default: m.ViewAddmission })));
+const ViewAdmissionApplication = lazy(() => import("./admin/pages/admissionApplication/ViewAdmissionApplication").then((m) => ({ default: m.ViewAdmissionApplication })));
+const AddGallery = lazy(() => import("./admin/pages/gallery/AddGallery").then((m) => ({ default: m.AddGallery })));
+const ViewGallery = lazy(() => import("./admin/pages/gallery/ViewGallery").then((m) => ({ default: m.ViewGallery })));
+const AddFaculty = lazy(() => import("./admin/pages/faculty/AddFaculty").then((m) => ({ default: m.AddFaculty })));
+const ViewFaculty = lazy(() => import("./admin/pages/faculty/ViewFaculty").then((m) => ({ default: m.ViewFaculty })));
+const ViewJobApplication = lazy(() => import("./admin/pages/jobApplication/ViewJobApplication").then((m) => ({ default: m.ViewJobApplication })));
+const ViewContent = lazy(() => import("./admin/pages/content/ViewContent").then((m) => ({ default: m.ViewContent })));
+const AddContent = lazy(() => import("./admin/pages/content/AddContent").then((m) => ({ default: m.AddContent })));
+const ViewAdmissionApplicationQuery = lazy(() => import("./admin/pages/admissionApplicationQuery/ViewAdmissionApplicationQuery").then((m) => ({ default: m.ViewAdmissionApplicationQuery })));
+const ViewUser = lazy(() => import("./admin/pages/user/ViewUser").then((m) => ({ default: m.ViewUser })));
+const AddUser = lazy(() => import("./admin/pages/user/AddUser").then((m) => ({ default: m.AddUser })));
+const ViewPaymentTransaction = lazy(() => import("./admin/pages/paymentTransaction/ViewPaymentTransaction").then((m) => ({ default: m.ViewPaymentTransaction })));
+
+// Lazy-loaded User / Student Portal Components
+const UserDashboard = lazy(() => import("./user/UserDashboard").then((m) => ({ default: m.UserDashboard })));
+const UserForgotPassword = lazy(() => import("./user/auth/UserForgetPassword").then((m) => ({ default: m.UserForgotPassword })));
+const QueryForm = lazy(() => import("./user/forms/QueryForm"));
+const PaymentFailure = lazy(() => import("./user/payment/PaymentFailure"));
+const PaymentSuccess = lazy(() => import("./user/payment/PaymentSuccess"));
+const MultiStepForm = lazy(() => import("./user/route/MultStepForm").then((m) => ({ default: m.MultiStepForm })));
+const PaymentSummary = lazy(() => import("./user/payment/PaymentSummary"));
+const StudentDataPdf = lazy(() => import("./user/submittedData/StudentDataPdf").then((m) => ({ default: m.StudentDataPdf })));
+const PaymentReceipt = lazy(() => import("./user/payment/PaymentReceipt").then((m) => ({ default: m.PaymentReceipt })));
+
+// Lightweight smooth loader for transition between pages
+const PageLoader = () => (
+  <div className="min-h-[60vh] flex items-center justify-center">
+    <div className="animate-spin rounded-full h-12 w-12 border-4 border-[#003963] border-t-transparent"></div>
+  </div>
+);
 
 function App() {
   return (
     <FormProvider>
-      <Routes>
-        <Route path={"/"} element={<Home />} />
+      <Suspense fallback={<PageLoader />}>
+        <Routes>
+          <Route path={"/"} element={<Home />} />
         <Route
           path={"/about/principal-message"}
           element={<PrincipalMessage />}
@@ -355,8 +369,9 @@ function App() {
 
         <Route path="/*" element={<Error404 />} />
       </Routes>
-    </FormProvider>
-  );
+    </Suspense>
+  </FormProvider>
+);
 }
 
 export default App;
