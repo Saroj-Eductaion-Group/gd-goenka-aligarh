@@ -451,7 +451,7 @@ function Header1() {
 
           <div className="relative peer">
             <li className="relative peer uppercase p-3 hover:bg-[#003963] hover:text-white rounded-md cursor-pointer transition-all">
-              NEW LETTER
+              NEWSLETTERS
             </li>
             <ul
               className="fee_payment_drop pt-3 top-[49px] font-extralight uppercase absolute hidden peer-hover:flex hover:flex w-[280px]
@@ -471,7 +471,7 @@ function Header1() {
                 className="menu-item cursor-pointer ps-2 px-3 py-2 hover:bg-[#003963] hover:text-white flex justify-between items-center whitespace-nowrap mt-[-16px]"
                 onClick={(e) => { e.stopPropagation(); setShowVolumes(!showVolumes); }}
               >
-                NEWLATTER 2025-2026 <span>{showVolumes ? "▲" : "▼"}</span>
+                NEWSLETTER 2025-2026 <span>{showVolumes ? "▲" : "▼"}</span>
               </li>
               {showVolumes && (
                 <>
@@ -494,12 +494,12 @@ function Header1() {
               )}
               <hr />
               <a
-                href="/pdfs/Newlatter_2026_27.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                href="/pdfs/Newsletter-2026-2027.pdf#toolbar=0&navpanes=0&scrollbar=0"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <li className="menu-item cursor-pointer ps-2 flex mt-[-16px] hover:text-white leading-none">
-                  NEWLATTER 2026-2027
+                  NEWSLETTER 2026-2027
                 </li>
               </a>
             </ul>
@@ -1103,7 +1103,7 @@ function Header1() {
             </AccordionDetails>
           </Accordion>
 
-          {/* NEW LETTER ACCORDIAN mobile*/}
+          {/* NEWSLETTER ACCORDIAN mobile*/}
           <Accordion>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
@@ -1111,7 +1111,7 @@ function Header1() {
               id="panel2-header"
               className="uppercase"
             >
-              New Letter
+              Newsletters
             </AccordionSummary>
             <AccordionDetails>
               <ul>
@@ -1125,23 +1125,61 @@ function Header1() {
                   </li>
                 </a>
                 <hr />
-                <a
-                  href="/pdfs/Newsletter-2025-2026.pdf#toolbar=0&navpanes=0&scrollbar=0"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <li
+                  className="menu-item cursor-pointer ps-1 flex mt-[-16px] ms-[-4px] uppercase justify-between items-center"
+                  onClick={() => setShowVolumes(!showVolumes)}
                 >
-                  <li className="menu-item cursor-pointer ps-1 flex mt-[-16px] ms-[-4px] uppercase">
-                    NEWLATTER 2025-2026
-                  </li>
-                </a>
+                  <span>NEWSLETTER 2025-2026</span>
+                  <span className="pr-2">{showVolumes ? "▲" : "▼"}</span>
+                </li>
+                {showVolumes && (
+                  <div className="pl-4 py-1 space-y-1 bg-gray-50 rounded">
+                    <a
+                      href="/pdfs/News-Letter-Design-quarter-1st.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <li className="menu-item cursor-pointer ps-2 text-sm uppercase">
+                        NEWSLETTER Volume - I
+                      </li>
+                    </a>
+                    <a
+                      href="/pdfs/News-Letter-Design-quarter-2nd.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <li className="menu-item cursor-pointer ps-2 text-sm uppercase">
+                        NEWSLETTER Volume - II
+                      </li>
+                    </a>
+                    <a
+                      href="/pdfs/News-Letter-Design-quarter-3rd.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <li className="menu-item cursor-pointer ps-2 text-sm uppercase">
+                        NEWSLETTER Volume - III
+                      </li>
+                    </a>
+                    <a
+                      href="/pdfs/News-Letter-Design-quarter-4rd.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <li className="menu-item cursor-pointer ps-2 text-sm uppercase">
+                        NEWSLETTER Volume - IV
+                      </li>
+                    </a>
+                  </div>
+                )}
                 <hr />
                 <a
-                  href="/pdfs/Newlatter_2026_27.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                  href="/pdfs/Newsletter-2026-2027.pdf#toolbar=0&navpanes=0&scrollbar=0"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <li className="menu-item cursor-pointer ps-1 leading-none flex mb-[-4px] uppercase ms-[-4px]">
-                    NEWLATTER 2026-2027
+                    NEWSLETTER 2026-2027
                   </li>
                 </a>
               </ul>
