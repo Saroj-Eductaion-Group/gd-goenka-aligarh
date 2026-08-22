@@ -25,6 +25,19 @@ const Newsletters = () => {
       <ul className="space-y-4">
 
         <li className="list-none">
+<<<<<<< HEAD
+=======
+          <a href="/pdfs/GDE-schoole.pdf#toolbar=0&navpanes=0&scrollbar=0" target="_blank" rel="noopener noreferrer"
+            className="block p-3 rounded-lg bg-[#2a3c7e] text-white hover:bg-blue-800 transition-colors duration-200">
+            <div className="flex items-center space-x-2">
+              {svgIcon(docIcon)}
+              <span>School & Faculty Profile</span>
+            </div>
+          </a>
+        </li>
+
+        <li className="list-none">
+>>>>>>> ddba4b4 (Added updated new Lattter and about school & faculty)
           <a href="/pdfs/Term2SyllabusAllClass.pdf#toolbar=0&navpanes=0&scrollbar=0" target="_blank" rel="noopener noreferrer"
             className="block p-3 rounded-lg bg-[#2a3c7e] text-white hover:bg-blue-800 transition-colors duration-200">
             <div className="flex items-center space-x-2">
@@ -73,7 +86,11 @@ const Newsletters = () => {
         </li>
 
         <li className="list-none">
+<<<<<<< HEAD
           <a href="/pdfs/Newlatter_2026_27.pdf#toolbar=0&navpanes=0&scrollbar=0" target="_blank" rel="noopener noreferrer"
+=======
+          <a href="/pdfs/News-Letter-Design-quarter-2027.pdf#toolbar=0&navpanes=0&scrollbar=0" target="_blank" rel="noopener noreferrer"
+>>>>>>> ddba4b4 (Added updated new Lattter and about school & faculty)
             className="block p-3 rounded-lg bg-[#2a3c7e] text-white hover:bg-blue-800 transition-colors duration-200">
             <div className="flex items-center space-x-2">
               {svgIcon(docIcon)}

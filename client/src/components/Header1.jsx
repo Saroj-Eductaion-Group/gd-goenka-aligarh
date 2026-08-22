@@ -457,8 +457,23 @@ function Header1() {
               className="fee_payment_drop pt-3 top-[49px] font-extralight uppercase absolute hidden peer-hover:flex hover:flex w-[280px]
                 flex-col bg-white drop-shadow-lg rounded-md delay-[2s] gap-4"
             >
+<<<<<<< HEAD
               <li
                 className="menu-item cursor-pointer ps-2 px-3 py-2 hover:bg-[#003963] hover:text-white flex justify-between items-center whitespace-nowrap"
+=======
+              <a
+                href="/pdfs/GDE-schoole.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <li className="menu-item cursor-pointer ps-2 px-3 py-2 hover:bg-[#003963] hover:text-white flex justify-between items-center whitespace-nowrap">
+                  SCHOOL & FACULTY PROFILE
+                </li>
+              </a>
+              <hr className="my-0" />
+              <li
+                className="menu-item cursor-pointer ps-2 px-3 py-2 hover:bg-[#003963] hover:text-white flex justify-between items-center whitespace-nowrap mt-[-16px]"
+>>>>>>> ddba4b4 (Added updated new Lattter and about school & faculty)
                 onClick={(e) => { e.stopPropagation(); setShowVolumes(!showVolumes); }}
               >
                 NEWLATTER 2025-2026 <span>{showVolumes ? "▲" : "▼"}</span>
@@ -484,7 +499,11 @@ function Header1() {
               )}
               <hr />
               <a
+<<<<<<< HEAD
                 href="/pdfs/Newlatter_2026_27.pdf#toolbar=0&navpanes=0&scrollbar=0"
+=======
+                href="/pdfs/News-Letter-Design-quarter-2027.pdf#toolbar=0&navpanes=0&scrollbar=0"
+>>>>>>> ddba4b4 (Added updated new Lattter and about school & faculty)
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -1106,6 +1125,19 @@ function Header1() {
             <AccordionDetails>
               <ul>
                 <a
+<<<<<<< HEAD
+=======
+                  href="/pdfs/GDE-schoole.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <li className="menu-item cursor-pointer ps-1 flex mt-[-16px] ms-[-4px] uppercase">
+                    SCHOOL & FACULTY PROFILE
+                  </li>
+                </a>
+                <hr />
+                <a
+>>>>>>> ddba4b4 (Added updated new Lattter and about school & faculty)
                   href="/pdfs/Newsletter-2025-2026.pdf#toolbar=0&navpanes=0&scrollbar=0"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -1116,7 +1148,11 @@ function Header1() {
                 </a>
                 <hr />
                 <a
+<<<<<<< HEAD
                   href="/pdfs/Newsletter-2026-2027.pdf#toolbar=0&navpanes=0&scrollbar=0"
+=======
+                  href="/pdfs/News-Letter-Design-quarter-2027.pdf#toolbar=0&navpanes=0&scrollbar=0"
+>>>>>>> ddba4b4 (Added updated new Lattter and about school & faculty)
                   target="_blank"
                   rel="noopener noreferrer"
                 >
