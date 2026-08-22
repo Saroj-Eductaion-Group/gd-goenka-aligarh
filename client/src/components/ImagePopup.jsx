@@ -65,11 +65,15 @@ function ImagePopup() {
         isClosing ? 'opacity-0' : 'opacity-100'
       }`}
     >
-      <div className="relative">
+      <div className="relative max-w-2xl w-full mx-4 flex justify-center">
         <img
           src={stage === 1 ? FirstPopupImage : PopupBanner}
-          alt="Popup"
-          className="w-full max-w-2xl max-h-[90vh] rounded-lg shadow-lg"
+          alt="Admission Announcement"
+          width={672}
+          height={800}
+          loading="eager"
+          decoding="async"
+          className="w-full max-w-2xl max-h-[90vh] object-contain rounded-lg shadow-lg"
         />
         <button
           className="absolute top-2 right-2 p-2 bg-gray-700 text-white rounded-full"

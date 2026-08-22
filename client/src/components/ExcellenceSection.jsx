@@ -88,6 +88,7 @@ const ExcellenceSection = () => {
             className="w-full h-full rounded-md"
             src="https://www.youtube.com/embed/NOrwQv50ScU?si=ARn0x4EqPtDB6NGy"
             title="GD Goenka Group Video"
+            loading="lazy"
             frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

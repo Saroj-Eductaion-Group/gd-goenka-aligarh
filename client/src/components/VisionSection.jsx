@@ -22,8 +22,12 @@ function VisionSection() {
             <div className="relative">
               <motion.img
                 src={principal}
-                alt="Principal"
-                className="w-full sm:w-4/5 mx-auto h-auto border border-gray-200 rounded-lg"
+                alt="Principal Dr. Anubhav Lodhi"
+                width={400}
+                height={400}
+                loading="lazy"
+                decoding="async"
+                className="w-full sm:w-4/5 mx-auto h-auto border border-gray-200 rounded-lg aspect-square"
                 initial={{ scale: 0.9 }}
                 whileHover={{ scale: 1 }}
                 transition={{ duration: 0.4 }}
@@ -31,6 +35,10 @@ function VisionSection() {
               <img
                 src={icon}
                 alt="icon"
+                width={96}
+                height={96}
+                loading="lazy"
+                decoding="async"
                 className="absolute bottom-2 left-4 w-16 sm:w-20 lg:w-24"
               />
             </div>
@@ -45,7 +53,7 @@ function VisionSection() {
                 personal development, shaping a bright future.
               </p>
               <div className="flex justify-end">
-                <NavLink to={"/about/principal-message"}>
+                <NavLink to={"/about/principal-message"} aria-label="Read Principal's Message">
                   <motion.div
                     whileHover={{ x: 10 }}
                     transition={{ type: "spring", stiffness: 200 }}
@@ -78,7 +86,7 @@ function VisionSection() {
                   : "To provide a holistic education that empowers students to excel academically, develop strong character, and become environmentally conscious global citizens. We strive to create a supportive and inclusive learning environment that encourages curiosity, creativity, and critical thinking, enabling our students to reach their full potential and make a positive impact in the world."}
               </p>
               <div className="flex justify-end">
-                <NavLink to={"/about/vision-and-mission"}>
+                <NavLink to={"/about/vision-and-mission"} aria-label={`Read more about our ${item}`}>
                   <motion.div
                     whileHover={{ scale: 1.2 }}
                     transition={{ duration: 0.3 }}

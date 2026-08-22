@@ -11,9 +11,14 @@ function ImageSection() {
           to={`https://forms.gdgoenka.com/regisration-form/gdgaligarh/`}
         >
           <img
-            className="w-full object-contain lg:rounded-b-[250px] lg:transition-all lg:duration-300 lg:ease-in-out lg:hover:rounded-b-none"
+            className="w-full object-contain lg:rounded-b-[250px] lg:transition-all lg:duration-300 lg:ease-in-out lg:hover:rounded-b-none aspect-[1600/748]"
             src={mainImage}
             alt="Gd-Goenka-School"
+            width={1600}
+            height={748}
+            fetchPriority="high"
+            loading="eager"
+            decoding="async"
           />
         </Link>
       </div>

@@ -50,8 +50,13 @@
     <link
       id="app-theme"
       rel="stylesheet"
-      href="/themes/lara-light-cyan/theme.css"
+      href="%PUBLIC_URL%/themes/lara-light-cyan/theme.css"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link rel="stylesheet" href="%PUBLIC_URL%/themes/lara-light-cyan/theme.css" />
+    </noscript>
     <!-- <title>GDGPS Aligarh</title> -->
   </head>
   <body>

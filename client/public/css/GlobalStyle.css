@@ -4,6 +4,7 @@
   src: url('./fonts/Polymath/Polymath-Black.otf') format('opentype');
   font-weight: 900;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -11,6 +12,7 @@
   src: url('./fonts/Polymath/Polymath-BlackIt.otf') format('opentype');
   font-weight: 900;
   font-style: italic;
+  font-display: swap;
 }
 
 /* Polymath Bold */
@@ -19,6 +21,7 @@
   src: url('./fonts/Polymath/Polymath-Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -26,6 +29,7 @@
   src: url('./fonts/Polymath/Polymath-BoldIt.otf') format('opentype');
   font-weight: 700;
   font-style: italic;
+  font-display: swap;
 }
 
 /* Polymath Italic */
@@ -34,6 +38,7 @@
   src: url('./fonts/Polymath/Polymath-Italic.otf') format('opentype');
   font-weight: normal;
   font-style: italic;
+  font-display: swap;
 }
 
 /* Polymath Light */
@@ -42,6 +47,7 @@
   src: url('./fonts/Polymath/Polymath-Light.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -49,6 +55,7 @@
   src: url('./fonts/Polymath/Polymath-LightIt.otf') format('opentype');
   font-weight: 300;
   font-style: italic;
+  font-display: swap;
 }
 
 /* Polymath Medium */
@@ -57,6 +64,7 @@
   src: url('./fonts/Polymath/Polymath-Medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -64,6 +72,7 @@
   src: url('./fonts/Polymath/Polymath-MediumIt.otf') format('opentype');
   font-weight: 500;
   font-style: italic;
+  font-display: swap;
 }
 
 /* Polymath Regular */
@@ -72,6 +81,7 @@
   src: url('./fonts/Polymath/Polymath-Regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 /* Polymath Semibold */
@@ -80,6 +90,7 @@
   src: url('./fonts/Polymath/Polymath-Semibold.otf') format('opentype');
   font-weight: 600;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -87,6 +98,7 @@
   src: url('./fonts/Polymath/Polymath-SemiboldIt.otf') format('opentype');
   font-weight: 600;
   font-style: italic;
+  font-display: swap;
 }
 
 /* Polymath Super */
@@ -95,6 +107,7 @@
   src: url('./fonts/Polymath/Polymath-Super.otf') format('opentype');
   font-weight: 950;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -102,6 +115,7 @@
   src: url('./fonts/Polymath/Polymath-SuperIt.otf') format('opentype');
   font-weight: 950;
   font-style: italic;
+  font-display: swap;
 }
 
 /* Polymath Thin */
@@ -110,6 +124,7 @@
   src: url('./fonts/Polymath/Polymath-Thin.otf') format('opentype');
   font-weight: 100;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -117,6 +132,7 @@
   src: url('./fonts/Polymath/Polymath-ThinIt.otf') format('opentype');
   font-weight: 100;
   font-style: italic;
+  font-display: swap;
 }
 
 /* Polymath Extra Light */
@@ -125,6 +141,7 @@
   src: url('./fonts/Polymath/Polymath-XLight.otf') format('opentype');
   font-weight: 200;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -132,4 +149,5 @@
   src: url('./fonts/Polymath/Polymath-XLightIt.otf') format('opentype');
   font-weight: 200;
   font-style: italic;
+  font-display: swap;
 }

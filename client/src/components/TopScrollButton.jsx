@@ -34,6 +34,7 @@ function TopScrollButton() {
           className="h-[1.4px] bg-red-600 transition-all duration-300 ease-out"
           style={{ width: `${progress}%` }}
           role="progressbar"
+          aria-label="Page scroll progress"
           aria-valuenow={progress}
           aria-valuemin={0}
           aria-valuemax={100}

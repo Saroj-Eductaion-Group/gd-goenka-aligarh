@@ -68,35 +68,35 @@ function Achievers(){
         {/* Perfect 100 Slide */}
         <div className="px-2 ">
           <div className="bg-gradient-to-r text-red-300 from-gray-100 to-white rounded-lg">
-            <img src={Topper} alt="Perfect 100 Toppers" className="rounded-lg" />
+            <img src={Topper} alt="Perfect 100 Toppers" loading="lazy" decoding="async" width={600} height={400} className="rounded-lg w-full h-auto" />
           </div>
         </div>
 
         {/* Class XII Stream Slide */}
         <div className="px-2">
           <div className="bg-gradient-to-r from-gray-100 to-white rounded-lg">
-            <img src={Topper1} alt="Class XII" className="rounded-lg" />
+            <img src={Topper1} alt="Class XII" loading="lazy" decoding="async" width={600} height={400} className="rounded-lg w-full h-auto" />
           </div>
         </div>
 
         {/* Commerce Stream Slide */}
         <div className="px-2">
           <div className="bg-gradient-to-r from-gray-100 to-white rounded-lg">
-            <img src={Topper2} alt="Commerce Topper" className="rounded-lg" />
+            <img src={Topper2} alt="Commerce Topper" loading="lazy" decoding="async" width={600} height={400} className="rounded-lg w-full h-auto" />
           </div>
         </div>
 
         {/* Humanities Stream Slide */}
         <div className="px-2">
           <div className="bg-gradient-to-r from-gray-100 to-white rounded-lg">
-            <img src={Topper4} alt="Humanities Topper" className="rounded-lg" />
+            <img src={Topper4} alt="Humanities Topper" loading="lazy" decoding="async" width={600} height={400} className="rounded-lg w-full h-auto" />
           </div>
         </div>
 
         {/* Science Slide */}
         <div className="px-2">
           <div className="bg-gradient-to-r from-gray-100 to-white rounded-lg">
-            <img src={Topper3} alt="Science Toppers" className="rounded-lg" />
+            <img src={Topper3} alt="Science Toppers" loading="lazy" decoding="async" width={600} height={400} className="rounded-lg w-full h-auto" />
           </div>
         </div>
       </Carousel>

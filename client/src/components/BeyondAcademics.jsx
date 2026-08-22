@@ -117,6 +117,10 @@ function BeyondAcademics() {
                   <img
                     src={card.image}
                     alt={card.title}
+                    loading="lazy"
+                    decoding="async"
+                    width={600}
+                    height={350}
                     className="w-full h-full object-cover"
                   />
                 </div>

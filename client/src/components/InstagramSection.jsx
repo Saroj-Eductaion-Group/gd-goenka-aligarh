@@ -45,6 +45,10 @@ const InstagramSection = () => {
                 <img
                   src={reel.image}
                   alt={`Instagram Reel ${index + 1}`}
+                  loading="lazy"
+                  decoding="async"
+                  width={250}
+                  height={350}
                   className="rounded-lg shadow-lg w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
                 />
                 {/* Hover Overlay */}

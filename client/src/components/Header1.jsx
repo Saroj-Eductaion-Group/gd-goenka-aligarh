@@ -33,12 +33,16 @@ function Header1() {
   return (
     <header className="sticky">
       <div className="header sticky  w-full bg-gray-100 flex justify-between items-center text-black py-4 px-2 md:w-full drop-shadow-md">
-        <Link to="/">
+        <Link to="/" aria-label="GD Goenka Home">
           <img
             src={logo}
-            alt="Gd Goenka logo"
+            alt="GD Goenka Public School Aligarh"
             className="gdGoenkaLogo hover:scale-110 transition-transform duration-300 ease-in-out"
             width={160}
+            height={42}
+            fetchPriority="high"
+            loading="eager"
+            decoding="async"
           />
         </Link>
 

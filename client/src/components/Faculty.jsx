@@ -87,6 +87,10 @@ function Faculty() {
                   <img
                     src={faculty.image}
                     alt={faculty.name}
+                    loading="lazy"
+                    decoding="async"
+                    width={224}
+                    height={224}
                     className="w-full h-full object-cover object-top"
                   />
                 </div>
