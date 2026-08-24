@@ -11,7 +11,6 @@ const cors = require("cors");
 const connectDb = require("./src/config/connectDb");
 const app = express();
 const path = require("path");
-const bodyParser = require("body-parser");
 const { upload, handleFileUpload } = require("./src/controllers/uploadController");
 
 // Router
@@ -44,7 +43,6 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.use("/src/uploads", express.static(path.join(__dirname, "src/uploads")));
 app.use(express.urlencoded({ extended: true }));
-app.use(bodyParser());
 
 // Database Connection
 connectDb();
