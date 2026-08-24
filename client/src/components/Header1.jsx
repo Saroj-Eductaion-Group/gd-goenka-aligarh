@@ -467,7 +467,7 @@ function Header1() {
                 rel="noopener noreferrer"
               >
                 <li className="menu-item cursor-pointer ps-2 px-3 py-2 hover:bg-[#003963] hover:text-white flex justify-between items-center whitespace-nowrap">
-                  SCHOOL & FACULTY PROFILE
+                  DIGITAL PROSPECTUS
                 </li>
               </a>
               <hr className="my-0" />
@@ -1125,7 +1125,7 @@ function Header1() {
                   rel="noopener noreferrer"
                 >
                   <li className="menu-item cursor-pointer ps-1 flex mt-[-16px] ms-[-4px] uppercase">
-                    SCHOOL & FACULTY PROFILE
+                    DIGITAL PROSPECTUS
                   </li>
                 </a>
                 <hr />
