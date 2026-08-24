@@ -498,7 +498,7 @@ function Header1() {
               )}
               <hr />
               <a
-                href="/pdfs/Newsletter-2026-2027.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                href="/pdfs/Newsletter-2026-2027.pdf?v=2026-27#toolbar=0&navpanes=0&scrollbar=0"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -1178,7 +1178,7 @@ function Header1() {
                 )}
                 <hr />
                 <a
-                  href="/pdfs/Newsletter-2026-2027.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                  href="/pdfs/Newsletter-2026-2027.pdf?v=2026-27#toolbar=0&navpanes=0&scrollbar=0"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

@@ -83,7 +83,7 @@ const Newsletters = () => {
         </li>
 
         <li className="list-none">
-          <a href="/pdfs/Newsletter-2026-2027.pdf#toolbar=0&navpanes=0&scrollbar=0" target="_blank" rel="noopener noreferrer"
+          <a href="/pdfs/Newsletter-2026-2027.pdf?v=2026-27#toolbar=0&navpanes=0&scrollbar=0" target="_blank" rel="noopener noreferrer"
             className="block p-3 rounded-lg bg-[#2a3c7e] text-white hover:bg-blue-800 transition-colors duration-200">
             <div className="flex items-center space-x-2">
               {svgIcon(docIcon)}
