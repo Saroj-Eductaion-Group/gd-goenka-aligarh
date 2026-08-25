@@ -179,12 +179,12 @@ function Header1() {
               <hr className="my-1" />
 
               <a
-                href="/pdfs/HolidayPlanner2025-26.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                href="/pdfs/HolidayPlanner2026-27.pdf?v=26-27#toolbar=0&navpanes=0&scrollbar=0"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <li className="menu-item cursor-pointer px-3 py-2 hover:bg-[#003963] hover:text-white transition-colors whitespace-nowrap">
-                  Holiday Planner 2025-26
+                  Holiday Planner 2026-27
                 </li>
               </a>
 
@@ -818,13 +818,12 @@ function Header1() {
                 </NavLink>
                 <hr />
                 <a
-                  href="/pdfs/HolidayPlanner2025-26.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                  href="/pdfs/HolidayPlanner2026-27.pdf?v=26-27#toolbar=0&navpanes=0&scrollbar=0"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <li className="menu-item cursor-pointer mt-[-4px] mb-[-4px] ms-[-4px] uppercase">
-                    {" "}
-                    Holiday Planner 2025-26
+                    Holiday Planner 2026-27
                   </li>
                 </a>
                 <hr />
