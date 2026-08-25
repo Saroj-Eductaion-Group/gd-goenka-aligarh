@@ -203,8 +203,8 @@ function VisionSection() {
                     pdfLink: "/pdfs/Notice-for-online-payment.pdf",
                   },
                   {
-                    title: "School Operation Committee Notice - GD Goenka",
-                    pdfLink: "/pdfs/School-Operations-Committee-2025-26.pdf",
+                    title: "School Operation Committee Notice 2026-27 - GD Goenka",
+                    pdfLink: "/pdfs/School-Operations-Committee-2026-27.pdf?v=26-27",
                   },
                   {
                     title: "Christmas Day Celebration - GD Goenka",

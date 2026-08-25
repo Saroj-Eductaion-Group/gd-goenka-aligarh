@@ -396,6 +396,16 @@ function Header1() {
                   Pocso Committee
                 </li>
               </a>
+              <hr />
+              <a
+                href="/pdfs/School-Operations-Committee-2026-27.pdf?v=26-27#toolbar=0&navpanes=0&scrollbar=0"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <li className="menu-item cursor-pointer ps-2 flex mt-[-16px] hover:text-white">
+                  Operations Committee 2026-27
+                </li>
+              </a>
             </ul>
           </div>
 
@@ -1101,6 +1111,18 @@ function Header1() {
                 >
                   <li className="menu-item cursor-pointer ps-1 leading-none flex  mb-[-4px] uppercase ms-[-4px]">
                     Pocso Committee
+                  </li>
+                </a>
+
+                <hr />
+
+                <a
+                  href="/pdfs/School-Operations-Committee-2026-27.pdf?v=26-27#toolbar=0&navpanes=0&scrollbar=0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <li className="menu-item cursor-pointer ps-1 leading-none flex  mb-[-4px] uppercase ms-[-4px]">
+                    Operations Committee 2026-27
                   </li>
                 </a>
               </ul>
