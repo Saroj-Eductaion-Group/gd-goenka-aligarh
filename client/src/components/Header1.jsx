@@ -366,12 +366,12 @@ function Header1() {
                 flex-col bg-white drop-shadow-lg rounded-md delay-[2s] gap-4"
             >
               <a
-                href="/pdfs/PTA 2025-26.docx#toolbar=0&navpanes=0&scrollbar=0"
+                href="/pdfs/Parent-Teacher-Association-2026-27.pdf?v=26-27#toolbar=0&navpanes=0&scrollbar=0"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <li className="menu-item cursor-pointer ps-2 flex mb-[-16px]  hover:text-white leading-none">
-                  PTA 2025-26
+                <li className="menu-item cursor-pointer ps-2 flex mb-[-16px] hover:text-white leading-none">
+                  PTA 2026-27
                 </li>
               </a>
               <hr />
@@ -1081,12 +1081,12 @@ function Header1() {
             <AccordionDetails>
               <ul>
                 <a
-                  href="/pdfs/PTA 2025-26.docx#toolbar=0&navpanes=0&scrollbar=0"
+                  href="/pdfs/Parent-Teacher-Association-2026-27.pdf?v=26-27#toolbar=0&navpanes=0&scrollbar=0"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <li className="menu-item cursor-pointer ps-1 flex mt-[-16px] ms-[-4px] uppercase">
-                    PTA 2025-26
+                    PTA 2026-27
                   </li>
                 </a>
                 <hr />
