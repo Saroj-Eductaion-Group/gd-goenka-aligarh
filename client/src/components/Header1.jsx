@@ -318,12 +318,12 @@ function Header1() {
               </a>
               <hr className="my-0" />
               <a
-                href="/pdfs/Class-Perfect-2025.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                href="/pdfs/Class-Prefect-2026-27.pdf?v=26-27#toolbar=0&navpanes=0&scrollbar=0"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <li className="menu-item cursor-pointer ps-3 py-2 hover:bg-[#003963] hover:text-white">
-                  Class Perfect 2025
+                  Class Prefect 2026-27
                 </li>
               </a>
               <hr className="my-0" />
@@ -1021,12 +1021,12 @@ function Header1() {
                 </a>
                 <hr />
                 <a
-                  href="/pdfs/Class-Perfect-2025.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                  href="/pdfs/Class-Prefect-2026-27.pdf?v=26-27#toolbar=0&navpanes=0&scrollbar=0"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <li className="menu-item cursor-pointer ps-1 leading-none flex mb-[-4px] uppercase ms-[-4px]">
-                    Class Perfect 2025
+                    Class Prefect 2026-27
                   </li>
                 </a>
                 <hr />
