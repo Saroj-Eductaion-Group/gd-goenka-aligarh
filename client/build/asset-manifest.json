@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.1ff91297.css",
-    "main.js": "/static/js/main.b9ac74c3.js",
+    "main.css": "/static/css/main.c9f746a7.css",
+    "main.js": "/static/js/main.6e9e271d.js",
     "static/js/2346.299713ef.chunk.js": "/static/js/2346.299713ef.chunk.js",
     "static/js/6786.e581daec.chunk.js": "/static/js/6786.e581daec.chunk.js",
-    "static/js/1761.08deebf6.chunk.js": "/static/js/1761.08deebf6.chunk.js",
+    "static/js/1761.d8f8572f.chunk.js": "/static/js/1761.d8f8572f.chunk.js",
     "static/css/5703.0f25b3bb.chunk.css": "/static/css/5703.0f25b3bb.chunk.css",
     "static/js/5703.491258b2.chunk.js": "/static/js/5703.491258b2.chunk.js",
     "static/js/9855.657f74ce.chunk.js": "/static/js/9855.657f74ce.chunk.js",
@@ -212,11 +212,11 @@
     "static/media/bgdesign4.webp": "/static/media/bgdesign4.ad9a7366bcedeb153fd0.webp",
     "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/index.html",
-    "main.1ff91297.css.map": "/static/css/main.1ff91297.css.map",
-    "main.b9ac74c3.js.map": "/static/js/main.b9ac74c3.js.map",
+    "main.c9f746a7.css.map": "/static/css/main.c9f746a7.css.map",
+    "main.6e9e271d.js.map": "/static/js/main.6e9e271d.js.map",
     "2346.299713ef.chunk.js.map": "/static/js/2346.299713ef.chunk.js.map",
     "6786.e581daec.chunk.js.map": "/static/js/6786.e581daec.chunk.js.map",
-    "1761.08deebf6.chunk.js.map": "/static/js/1761.08deebf6.chunk.js.map",
+    "1761.d8f8572f.chunk.js.map": "/static/js/1761.d8f8572f.chunk.js.map",
     "5703.0f25b3bb.chunk.css.map": "/static/css/5703.0f25b3bb.chunk.css.map",
     "5703.491258b2.chunk.js.map": "/static/js/5703.491258b2.chunk.js.map",
     "9855.657f74ce.chunk.js.map": "/static/js/9855.657f74ce.chunk.js.map",
@@ -290,7 +290,7 @@
     "7009.3ed15786.chunk.js.map": "/static/js/7009.3ed15786.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1ff91297.css",
-    "static/js/main.b9ac74c3.js"
+    "static/css/main.c9f746a7.css",
+    "static/js/main.6e9e271d.js"
   ]
 }

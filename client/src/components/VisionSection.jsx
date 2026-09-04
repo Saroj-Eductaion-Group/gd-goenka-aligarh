@@ -82,7 +82,7 @@ function VisionSection() {
               </h2>
               <p className="text-white text-lg mb-6">
                 {item === "Vision"
-                  ? "Empowering students to reach their full potential in a supportive and inclusive learning environment that fosters academic excellence, character development, and environmental awareness"
+                  ? "Empowering students to reach their full potential in a supportive and inclusive learning environment that fosters academic excellence, character development, and environmental awareness."
                   : "To provide a holistic education that empowers students to excel academically, develop strong character, and become environmentally conscious global citizens. We strive to create a supportive and inclusive learning environment that encourages curiosity, creativity, and critical thinking, enabling our students to reach their full potential and make a positive impact in the world."}
               </p>
               <div className="flex justify-end">
