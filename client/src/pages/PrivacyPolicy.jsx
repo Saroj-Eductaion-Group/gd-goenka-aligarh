@@ -71,7 +71,7 @@ const PrivacyPolicy = () => {
     setActivePolicyId(id);
     window.history.replaceState(null, "", `#${id}`);
     const detailElement = document.getElementById("policy-viewer-pane");
-    if (detailElement && window.innerWidth < 1024) {
+    if (detailElement) {
       detailElement.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
@@ -149,7 +149,7 @@ const PrivacyPolicy = () => {
       </Helmet>
 
       {/* Hero Banner Section */}
-      <div className="relative h-[25vh] md:h-[40vh] overflow-hidden bg-[#003963]">
+      <div className="relative h-[25vh] md:h-[38vh] overflow-hidden bg-[#003963]">
         <img
           src={ActivitesBanner}
           alt="School Policies Banner"
@@ -175,41 +175,44 @@ const PrivacyPolicy = () => {
       {/* Main Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-10">
         {/* Quick Highlights Bar */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-8">
-          <div className="bg-white rounded-xl p-4 border border-gray-200 shadow-sm flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-blue-50 text-[#003963] flex items-center justify-center font-bold text-lg">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+          <div className="bg-white rounded-xl p-4 border border-gray-200 shadow-sm flex items-center gap-3.5">
+            <div className="w-12 h-12 rounded-xl bg-blue-50 text-[#003963] flex items-center justify-center font-bold text-lg shrink-0 border border-blue-100">
               {schoolPoliciesList.length}
             </div>
-            <div>
-              <p className="text-xs text-gray-500 font-medium">Total Policies</p>
-              <p className="text-sm font-bold text-gray-900">Official Index</p>
+            <div className="min-w-0">
+              <p className="text-xs text-gray-500 font-medium">Official Index</p>
+              <p className="text-sm font-bold text-gray-900 truncate">26 School Policies</p>
             </div>
           </div>
-          <div className="bg-white rounded-xl p-4 border border-gray-200 shadow-sm flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-yellow-50 text-[#bea05a] flex items-center justify-center font-bold text-lg">
+
+          <div className="bg-white rounded-xl p-4 border border-gray-200 shadow-sm flex items-center gap-3.5">
+            <div className="w-12 h-12 rounded-xl bg-yellow-50 text-[#bea05a] flex items-center justify-center font-bold text-lg shrink-0 border border-yellow-100">
               6
             </div>
-            <div>
+            <div className="min-w-0">
               <p className="text-xs text-gray-500 font-medium">Governance</p>
-              <p className="text-sm font-bold text-gray-900">Key Categories</p>
+              <p className="text-sm font-bold text-gray-900 truncate">Core Categories</p>
             </div>
           </div>
-          <div className="bg-white rounded-xl p-4 border border-gray-200 shadow-sm flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center font-bold text-lg">
+
+          <div className="bg-white rounded-xl p-4 border border-gray-200 shadow-sm flex items-center gap-3.5">
+            <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center font-bold text-lg shrink-0 border border-emerald-100">
               ✓
             </div>
-            <div>
-              <p className="text-xs text-gray-500 font-medium">Compliance</p>
-              <p className="text-sm font-bold text-gray-900">CBSE & NEP 2020</p>
+            <div className="min-w-0">
+              <p className="text-xs text-gray-500 font-medium">Regulatory Framework</p>
+              <p className="text-sm font-bold text-gray-900 truncate">CBSE & NEP 2020</p>
             </div>
           </div>
-          <div className="bg-white rounded-xl p-4 border border-gray-200 shadow-sm flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-purple-50 text-purple-700 flex items-center justify-center font-bold text-lg">
-              26-27
+
+          <div className="bg-white rounded-xl p-4 border border-gray-200 shadow-sm flex items-center gap-3.5">
+            <div className="px-3 h-12 rounded-xl bg-purple-50 text-purple-700 flex items-center justify-center font-bold text-xs sm:text-sm whitespace-nowrap shrink-0 border border-purple-100">
+              2026–27
             </div>
-            <div>
-              <p className="text-xs text-gray-500 font-medium">Academic Year</p>
-              <p className="text-sm font-bold text-gray-900">Active Session</p>
+            <div className="min-w-0">
+              <p className="text-xs text-gray-500 font-medium">Active Session</p>
+              <p className="text-sm font-bold text-gray-900 truncate">Academic Year 2026–27</p>
             </div>
           </div>
         </div>
@@ -241,7 +244,7 @@ const PrivacyPolicy = () => {
             {/* Direct Jump to Privacy Policy */}
             <button
               onClick={() => handleSelectPolicy("privacy-and-data-protection")}
-              className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all shadow-sm ${
+              className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all shadow-sm ${
                 activePolicy?.id === "privacy-and-data-protection"
                   ? "bg-[#003963] text-white ring-2 ring-[#bea05a]"
                   : "bg-[#bea05a]/15 text-[#8c6d1d] hover:bg-[#bea05a]/25"
@@ -286,11 +289,11 @@ const PrivacyPolicy = () => {
           </div>
         </div>
 
-        {/* Policy Index & Content Reader Grid */}
+        {/* Policy Index & Content Reader Grid (Full Page View, No Overlaps, No Inner Scrollbars) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* Left Sidebar: Policy Directory */}
+          {/* Left Column: Policy Directory (Full Page Height, No Sticky Overlap) */}
           <div className="lg:col-span-4 space-y-3">
-            <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-4 sticky top-24">
+            <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-4">
               <div className="flex items-center justify-between pb-3 mb-3 border-b border-gray-100">
                 <div className="flex items-center gap-2">
                   <FaBookOpen className="text-[#003963]" />
@@ -303,8 +306,8 @@ const PrivacyPolicy = () => {
                 </span>
               </div>
 
-              {/* Policy List */}
-              <div className="space-y-1.5 max-h-[60vh] lg:max-h-[70vh] overflow-y-auto pr-1 custom-scrollbar">
+              {/* Policy List without internal scrollbar */}
+              <div className="space-y-1.5">
                 {filteredPolicies.length === 0 ? (
                   <div className="text-center py-8 px-4 text-gray-500">
                     <p className="text-sm font-medium">No policies found matching your search.</p>
@@ -346,7 +349,7 @@ const PrivacyPolicy = () => {
                           </span>
                           <div className="min-w-0">
                             <p
-                              className={`text-xs md:text-sm font-semibold truncate leading-tight ${
+                              className={`text-xs md:text-sm font-semibold leading-tight ${
                                 isActive ? "text-white" : "text-gray-900 group-hover:text-[#003963]"
                               }`}
                             >
@@ -377,10 +380,10 @@ const PrivacyPolicy = () => {
             </div>
           </div>
 
-          {/* Right Pane: Policy Detailed View */}
+          {/* Right Pane: Policy Detailed View (Full Page View) */}
           <div
             id="policy-viewer-pane"
-            className="lg:col-span-8 bg-white rounded-2xl border border-gray-200 shadow-md p-6 sm:p-8 lg:p-10"
+            className="lg:col-span-8 bg-white rounded-2xl border border-gray-200 shadow-md p-6 sm:p-8 lg:p-10 scroll-mt-28"
           >
             {activePolicy ? (
               <div>
@@ -391,7 +394,7 @@ const PrivacyPolicy = () => {
                       <ActiveIcon className="text-xs" /> {activePolicy.category}
                     </span>
                     <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-100">
-                      <FaCheckCircle className="text-[10px]" /> Active Session 2026-27
+                      <FaCheckCircle className="text-[10px]" /> Active Session 2026–27
                     </span>
                   </div>
 
