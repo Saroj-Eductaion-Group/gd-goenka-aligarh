@@ -70,9 +70,12 @@ const PrivacyPolicy = () => {
   const handleSelectPolicy = (id) => {
     setActivePolicyId(id);
     window.history.replaceState(null, "", `#${id}`);
-    const detailElement = document.getElementById("policy-viewer-pane");
-    if (detailElement) {
-      detailElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    // Prevent auto-scrolling jumping on desktop; only smooth scroll on mobile if stacked
+    if (window.innerWidth < 768) {
+      const detailElement = document.getElementById("policy-viewer-pane");
+      if (detailElement) {
+        detailElement.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     }
   };
 
