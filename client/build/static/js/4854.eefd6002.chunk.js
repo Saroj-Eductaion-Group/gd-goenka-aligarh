@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgd_goenka=self.webpackChunkgd_goenka||[]).push([[4854],{8898:(e,t,c)=>{c.r(t),c.d(t,{default:()=>a});c(7565);const r=c.p+"static/media/Fee-Structure-GDG.4656ecc0af82462a5115.pdf";var s=c(7929);const a=()=>(document.title="Fee Structure 2026-27 - GDGPS Aligarh",(0,s.jsx)("div",{className:"w-screen h-screen flex items-center justify-center",children:(0,s.jsx)("iframe",{src:"".concat(r,"#toolbar=0"),title:"Fees Structure Pdf",className:"w-full h-full",frameBorder:"0"})}))}}]);
+//# sourceMappingURL=4854.eefd6002.chunk.js.map

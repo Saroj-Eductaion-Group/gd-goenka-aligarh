@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgd_goenka=self.webpackChunkgd_goenka||[]).push([[5154],{7883:(e,s,l)=>{l.r(s),l.d(s,{default:()=>c});l(7565);const t=l.p+"static/media/ListofAuthorisedBookSellers.23947374c54261a0337d.pdf";var r=l(7929);const c=()=>(document.title="Book Seller",(0,r.jsx)("div",{className:"w-screen h-screen flex items-center justify-center",children:(0,r.jsx)("iframe",{src:t,title:"Book Seller List",className:"w-full h-full",frameBorder:"0"})}))}}]);
+//# sourceMappingURL=5154.397faac4.chunk.js.map

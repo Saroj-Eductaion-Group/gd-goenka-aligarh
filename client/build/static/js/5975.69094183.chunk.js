@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgd_goenka=self.webpackChunkgd_goenka||[]).push([[5975],{2191:(e,s,t)=>{t.r(s),t.d(s,{default:()=>n});t(7565);const a=t.p+"static/media/Recognisation-Cet-Nur-to-8.8c372b503e542ae7f179.pdf";var c=t(7929);const n=()=>(document.title="Mandatory Disclosure - GDGPS Aligarh",(0,c.jsx)("div",{className:"w-screen h-screen flex items-center justify-center",children:(0,c.jsx)("iframe",{src:a,title:"RecognisationPdf",className:"w-full h-full",frameBorder:"0"})}))}}]);
+//# sourceMappingURL=5975.69094183.chunk.js.map

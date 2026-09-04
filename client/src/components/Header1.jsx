@@ -79,6 +79,12 @@ function Header1() {
                 VISION & MISSION
               </li>
             </NavLink>
+            <hr />
+            <NavLink to={"/privacy-policy"}>
+              <li className="menu-item cursor-pointer hover:text-white mt-[-9px]">
+                SCHOOL POLICIES
+              </li>
+            </NavLink>
             {/* <NavLink to={"/about/mandatory-disclosure"}>
               {" "}
               <li className="menu-item cursor-pointer hover:text-white mt-[-9px]">
@@ -711,6 +717,13 @@ function Header1() {
                   {" "}
                   <li className="menu-item cursor-pointer mt-[-4px] ms-[-4px] leading-none uppercase">
                     mandatory disclosure
+                  </li>
+                </NavLink>
+                <hr />
+                <NavLink to={"/privacy-policy"}>
+                  {" "}
+                  <li className="menu-item cursor-pointer mt-[-4px] ms-[-4px] leading-none uppercase">
+                    school policies & privacy
                   </li>
                 </NavLink>
               </ul>

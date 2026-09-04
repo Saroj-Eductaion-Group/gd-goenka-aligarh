@@ -62,6 +62,11 @@ function Footer() {
                 Mission and Vision
               </li>
             </NavLink>
+            <NavLink to={"/privacy-policy"}>
+              <li className="hover:text-blue-300 cursor-pointer font-polymath font-light">
+                School Policies & Privacy
+              </li>
+            </NavLink>
           </ul>
         </div>
 
@@ -232,10 +237,13 @@ function Footer() {
 
       {/* Footer Bottom */}
       <div className="border-t border-gray-700 mt-8 pt-4 text-center">
-        <p className="text-sm">
-          © {new Date().getFullYear()} G.D. Goenka Public School. All rights
-          reserved.
-        </p>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-sm text-gray-300">
+          <p>© {new Date().getFullYear()} G.D. Goenka Public School. All rights reserved.</p>
+          <span className="hidden sm:inline">|</span>
+          <NavLink to="/privacy-policy" className="hover:text-[#bea05a] underline transition-colors">
+            School Policies & Privacy Policy
+          </NavLink>
+        </div>
       </div>
     </footer>
   );

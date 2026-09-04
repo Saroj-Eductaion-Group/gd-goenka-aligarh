@@ -26,6 +26,7 @@ const Activities = lazy(() => import("./pages/Activities"));
 const ImageGallery = lazy(() => import("./pages/ImageGallery"));
 const ContactForm = lazy(() => import("./pages/ContactForm"));
 const MandatoryDisclosure = lazy(() => import("./pages/MandatoryDisclosure"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const GoenkanPursuits = lazy(() => import("./pages/GoenkanPursuits"));
 const FeeStructure = lazy(() => import("./pages/FeeStructure"));
 const AdmissionForm = lazy(() => import("./pages/AdmissionForm"));
@@ -97,6 +98,18 @@ function App() {
         <Route
           path={"/about/mandatory-disclosure"}
           element={<MandatoryDisclosure />}
+        />
+        <Route
+          path={"/privacy-policy"}
+          element={<PrivacyPolicy />}
+        />
+        <Route
+          path={"/school-policies"}
+          element={<PrivacyPolicy />}
+        />
+        <Route
+          path={"/about/school-policies"}
+          element={<PrivacyPolicy />}
         />
         <Route
           path={"/academics/faculty-&-curriculum"}
