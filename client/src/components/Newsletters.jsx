@@ -247,6 +247,17 @@ const Newsletters = () => {
           </a>
         </li>
 
+        {/* 6. School Year Magazine */}
+        <li className="list-none">
+          <a href="/pdfs/Year-Magazine-2025-26.pdf?v=1#toolbar=0&navpanes=0&scrollbar=0" target="_blank" rel="noopener noreferrer"
+            className="block p-3 rounded-lg bg-[#2a3c7e] text-white hover:bg-blue-800 transition-colors duration-200">
+            <div className="flex items-center space-x-2">
+              {svgIcon(docIcon)}
+              <span>SCHOOL YEAR MAGAZINE</span>
+            </div>
+          </a>
+        </li>
+
       </ul>
     </div>
   );

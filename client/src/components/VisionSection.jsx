@@ -207,6 +207,10 @@ function VisionSection() {
                     pdfLink: "/pdfs/School-Operations-Committee-2026-27.pdf?v=26-27",
                   },
                   {
+                    title: "Transport Committee Notice 2026-27 - GD Goenka",
+                    pdfLink: "/pdfs/Transport-Committee-2026-27.pdf?v=26-27",
+                  },
+                  {
                     title: "Christmas Day Celebration - GD Goenka",
                     pdfLink: "/pdfs/Christmas-Celebration.pdf",
                   },

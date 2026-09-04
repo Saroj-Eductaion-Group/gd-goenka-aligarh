@@ -406,6 +406,16 @@ function Header1() {
                   Operations Committee 2026-27
                 </li>
               </a>
+              <hr />
+              <a
+                href="/pdfs/Transport-Committee-2026-27.pdf?v=26-27#toolbar=0&navpanes=0&scrollbar=0"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <li className="menu-item cursor-pointer ps-2 flex mt-[-16px] hover:text-white">
+                  Transport Committee
+                </li>
+              </a>
             </ul>
           </div>
 
@@ -514,6 +524,16 @@ function Header1() {
               >
                 <li className="menu-item cursor-pointer ps-2 flex mt-[-16px] hover:text-white leading-none">
                   NEWSLETTER 2026-2027
+                </li>
+              </a>
+              <hr />
+              <a
+                href="/pdfs/Year-Magazine-2025-26.pdf?v=1#toolbar=0&navpanes=0&scrollbar=0"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <li className="menu-item cursor-pointer ps-2 flex mt-[-16px] hover:text-white leading-none">
+                  SCHOOL YEAR MAGAZINE
                 </li>
               </a>
             </ul>
@@ -1124,6 +1144,18 @@ function Header1() {
                     Operations Committee 2026-27
                   </li>
                 </a>
+
+                <hr />
+
+                <a
+                  href="/pdfs/Transport-Committee-2026-27.pdf?v=26-27#toolbar=0&navpanes=0&scrollbar=0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <li className="menu-item cursor-pointer ps-1 leading-none flex  mb-[-4px] uppercase ms-[-4px]">
+                    Transport Committee
+                  </li>
+                </a>
               </ul>
             </AccordionDetails>
           </Accordion>
@@ -1205,6 +1237,16 @@ function Header1() {
                 >
                   <li className="menu-item cursor-pointer ps-1 leading-none flex mb-[-4px] uppercase ms-[-4px]">
                     NEWSLETTER 2026-2027
+                  </li>
+                </a>
+                <hr />
+                <a
+                  href="/pdfs/Year-Magazine-2025-26.pdf?v=1#toolbar=0&navpanes=0&scrollbar=0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <li className="menu-item cursor-pointer ps-1 leading-none flex mb-[-4px] uppercase ms-[-4px]">
+                    SCHOOL YEAR MAGAZINE
                   </li>
                 </a>
               </ul>
