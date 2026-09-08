@@ -151,6 +151,30 @@ function Header1() {
 
               <hr className="my-1" />
 
+              <a
+                href="/pdfs/21st_Century_Skill_Handbook.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <li className="menu-item cursor-pointer px-3 py-2 hover:bg-[#003963] hover:text-white transition-colors whitespace-nowrap">
+                  21ST CENTURY SKILLS HANDBOOK
+                </li>
+              </a>
+
+              <hr className="my-1" />
+
+              <a
+                href="/pdfs/Value-Education-Kits.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <li className="menu-item cursor-pointer px-3 py-2 hover:bg-[#003963] hover:text-white transition-colors whitespace-nowrap">
+                  VALUE EDUCATION KITS
+                </li>
+              </a>
+
+              <hr className="my-1" />
+
               {/* OLD MENUS */}
               <NavLink to={"/academics/faculty-&-curriculum"}>
                 <li className="menu-item cursor-pointer px-3 py-2 hover:bg-[#003963] hover:text-white transition-colors whitespace-nowrap">
@@ -811,6 +835,26 @@ function Header1() {
                 >
                   <li className="menu-item cursor-pointer mb-[-4px] ms-[-4px] uppercase">
                     NCF 2023
+                  </li>
+                </a>
+                <hr />
+                <a
+                  href="/pdfs/21st_Century_Skill_Handbook.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <li className="menu-item cursor-pointer mb-[-4px] ms-[-4px] uppercase">
+                    21ST CENTURY SKILLS HANDBOOK
+                  </li>
+                </a>
+                <hr />
+                <a
+                  href="/pdfs/Value-Education-Kits.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <li className="menu-item cursor-pointer mb-[-4px] ms-[-4px] uppercase">
+                    VALUE EDUCATION KITS
                   </li>
                 </a>
                 <hr />
