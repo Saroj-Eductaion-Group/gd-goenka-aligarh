@@ -364,7 +364,7 @@ function Header1() {
               </NavLink>
               <hr className="my-0" />
               <a
-                href="/pdfs/Date_Sheet_(2026-27).pdf#toolbar=0&navpanes=0&scrollbar=0"
+                href="/pdfs/Date-Sheet-Term-1-2026-27.pdf#toolbar=0&navpanes=0&scrollbar=0"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -374,7 +374,7 @@ function Header1() {
               </a>
               <hr className="my-0" />
               <a
-                href="/pdfs/PT-2_Syllabus_(2026-27).pdf#toolbar=0&navpanes=0&scrollbar=0"
+                href="/pdfs/Term-1-Syllabus-2026-27.pdf#toolbar=0&navpanes=0&scrollbar=0"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -1123,7 +1123,7 @@ function Header1() {
                 </NavLink>
                 <hr />
                 <a
-                  href="/pdfs/Date_Sheet_(2026-27).pdf#toolbar=0&navpanes=0&scrollbar=0"
+                  href="/pdfs/Date-Sheet-Term-1-2026-27.pdf#toolbar=0&navpanes=0&scrollbar=0"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -1133,7 +1133,7 @@ function Header1() {
                 </a>
                 <hr />
                 <a
-                  href="/pdfs/PT-2_Syllabus_(2026-27).pdf#toolbar=0&navpanes=0&scrollbar=0"
+                  href="/pdfs/Term-1-Syllabus-2026-27.pdf#toolbar=0&navpanes=0&scrollbar=0"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

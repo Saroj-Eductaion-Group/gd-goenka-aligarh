@@ -21,7 +21,7 @@ const Newsletters = () => {
   const [showVolumes, setShowVolumes] = useState(false);
   const [showExam, setShowExam] = useState(false);
   const [selectedTerm, setSelectedTerm] = useState('term1');
-  const [openPT, setOpenPT] = useState({ pt1: true, pt2: false });
+  const [openPT, setOpenPT] = useState({ pt1: false, pt2: false, term1: true });
 
   const togglePT = (key) => {
     setOpenPT((prev) => ({ ...prev, [key]: !prev[key] }));
@@ -167,10 +167,43 @@ const Newsletters = () => {
                     )}
                   </div>
 
-                  {/* Half Yearly Exam */}
-                  <div className="p-2.5 bg-gray-100 border border-gray-200 rounded-md flex justify-between items-center text-xs sm:text-sm text-gray-500">
-                    <span className="font-medium">Half Yearly Exam</span>
-                    <span className="text-[10px] bg-gray-200 px-2 py-0.5 rounded text-gray-600 font-semibold">Coming Soon</span>
+                  {/* Term-1 Examination */}
+                  <div className="bg-white border border-gray-200 rounded-md overflow-hidden">
+                    <div
+                      onClick={() => togglePT('term1')}
+                      className="p-2.5 bg-blue-100/70 hover:bg-blue-100 cursor-pointer flex justify-between items-center text-xs sm:text-sm font-semibold text-[#2a3c7e]"
+                    >
+                      <span>Term-1 Exam (2026-27)</span>
+                      <span className="text-[10px]">{openPT.term1 ? '▲' : '▼'}</span>
+                    </div>
+                    {openPT.term1 && (
+                      <div className="p-2 space-y-1.5 bg-white">
+                        <a
+                          href="/pdfs/Term-1-Syllabus-2026-27.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-between p-2 rounded bg-blue-50 hover:bg-[#2a3c7e] hover:text-white text-xs text-gray-800 transition-colors"
+                        >
+                          <span className="flex items-center gap-1.5">
+                            {svgIcon(docIcon)}
+                            <span>Term-1 Syllabus</span>
+                          </span>
+                          <span className="text-[10px] uppercase font-bold text-blue-600">PDF ↗</span>
+                        </a>
+                        <a
+                          href="/pdfs/Date-Sheet-Term-1-2026-27.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-between p-2 rounded bg-blue-50 hover:bg-[#2a3c7e] hover:text-white text-xs text-gray-800 transition-colors"
+                        >
+                          <span className="flex items-center gap-1.5">
+                            {svgIcon(calIcon)}
+                            <span>Term-1 Date Sheet</span>
+                          </span>
+                          <span className="text-[10px] uppercase font-bold text-blue-600">PDF ↗</span>
+                        </a>
+                      </div>
+                    )}
                   </div>
                 </div>
               )}
