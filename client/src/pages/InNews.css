@@ -69,19 +69,141 @@
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   padding: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
 }
 
 .gallery-card:hover {
-  transform: scale(1.02);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  background-color: #f1f1f1;
 }
 
 .gallery-image {
   width: 100%;
-  height: auto;
+  height: 280px;
+  object-fit: cover;
+  object-position: top center;
   display: block;
-  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-card:hover .gallery-image {
+  transform: scale(1.03);
+}
+
+.gallery-zoom-hint {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  pointer-events: none;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.gallery-card:hover .gallery-zoom-hint {
+  opacity: 1;
+  background: rgba(214, 40, 40, 0.9);
+}
+
+/* Modal / Lightbox */
+.news-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.82);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.news-modal-content {
+  position: relative;
+  background: #fff;
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  border-radius: 10px;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+}
+
+.news-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.news-modal-close:hover {
+  background: #d62828;
+}
+
+.news-modal-image {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+  background: #111;
+  display: block;
+}
+
+.news-modal-info {
+  padding: 20px 24px;
+  text-align: left;
+}
+
+.news-modal-info h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.35rem;
+  color: #222;
+}
+
+.news-modal-info p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
 }
 
 .gallery-caption {
