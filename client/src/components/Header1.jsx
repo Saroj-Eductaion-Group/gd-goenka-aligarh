@@ -364,22 +364,22 @@ function Header1() {
               </NavLink>
               <hr className="my-0" />
               <a
-                href="/pdfs/Date-Sheet-Term-1-2026-27.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                href="/pdfs/Date-Sheet-PT-3-2026-27.pdf#toolbar=0&navpanes=0&scrollbar=0"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <li className="menu-item cursor-pointer ps-3 py-2 hover:bg-[#003963] hover:text-white">
-                  Date Sheet 2026-27
+                  Date Sheet PT-3 (2026-27)
                 </li>
               </a>
               <hr className="my-0" />
               <a
-                href="/pdfs/Term-1-Syllabus-2026-27.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                href="/pdfs/PT-3-Syllabus-All-Classes-2026-27.pdf#toolbar=0&navpanes=0&scrollbar=0"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <li className="menu-item cursor-pointer ps-3 py-2 hover:bg-[#003963] hover:text-white">
-                  Syllabus 2026-27
+                  Syllabus PT-3 (2026-27)
                 </li>
               </a>
             </ul>
@@ -1123,22 +1123,22 @@ function Header1() {
                 </NavLink>
                 <hr />
                 <a
-                  href="/pdfs/Date-Sheet-Term-1-2026-27.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                  href="/pdfs/Date-Sheet-PT-3-2026-27.pdf#toolbar=0&navpanes=0&scrollbar=0"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <li className="menu-item cursor-pointer ps-1 leading-none flex mb-[-4px] uppercase ms-[-4px]">
-                    Date Sheet 2026-27
+                    Date Sheet PT-3 (2026-27)
                   </li>
                 </a>
                 <hr />
                 <a
-                  href="/pdfs/Term-1-Syllabus-2026-27.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                  href="/pdfs/PT-3-Syllabus-All-Classes-2026-27.pdf#toolbar=0&navpanes=0&scrollbar=0"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <li className="menu-item cursor-pointer ps-1 leading-none flex mb-[-4px] uppercase ms-[-4px]">
-                    Syllabus 2026-27
+                    Syllabus PT-3 (2026-27)
                   </li>
                 </a>
               </ul>

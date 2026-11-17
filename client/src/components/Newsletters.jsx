@@ -20,8 +20,8 @@ const volumes = [
 const Newsletters = () => {
   const [showVolumes, setShowVolumes] = useState(false);
   const [showExam, setShowExam] = useState(false);
-  const [selectedTerm, setSelectedTerm] = useState('term1');
-  const [openPT, setOpenPT] = useState({ pt1: false, pt2: false, term1: true });
+  const [selectedTerm, setSelectedTerm] = useState('term2');
+  const [openPT, setOpenPT] = useState({ pt1: false, pt2: false, term1: false, pt3: true });
 
   const togglePT = (key) => {
     setOpenPT((prev) => ({ ...prev, [key]: !prev[key] }));
@@ -211,10 +211,45 @@ const Newsletters = () => {
               {/* Term-2 Content */}
               {selectedTerm === 'term2' && (
                 <div className="space-y-2 pt-1">
-                  <div className="p-2.5 bg-gray-100 border border-gray-200 rounded-md flex justify-between items-center text-xs sm:text-sm text-gray-500">
-                    <span className="font-medium">Periodic Test 3rd</span>
-                    <span className="text-[10px] bg-gray-200 px-2 py-0.5 rounded text-gray-600 font-semibold">Coming Soon</span>
+                  {/* Periodic Test 3rd */}
+                  <div className="bg-white border border-gray-200 rounded-md overflow-hidden">
+                    <div
+                      onClick={() => togglePT('pt3')}
+                      className="p-2.5 bg-blue-100/70 hover:bg-blue-100 cursor-pointer flex justify-between items-center text-xs sm:text-sm font-semibold text-[#2a3c7e]"
+                    >
+                      <span>Periodic Test 3rd</span>
+                      <span className="text-[10px]">{openPT.pt3 ? '▲' : '▼'}</span>
+                    </div>
+                    {openPT.pt3 && (
+                      <div className="p-2 space-y-1.5 bg-white">
+                        <a
+                          href="/pdfs/PT-3-Syllabus-All-Classes-2026-27.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-between p-2 rounded bg-blue-50 hover:bg-[#2a3c7e] hover:text-white text-xs text-gray-800 transition-colors"
+                        >
+                          <span className="flex items-center gap-1.5">
+                            {svgIcon(docIcon)}
+                            <span>PT-3 Syllabus</span>
+                          </span>
+                          <span className="text-[10px] uppercase font-bold text-blue-600">PDF ↗</span>
+                        </a>
+                        <a
+                          href="/pdfs/Date-Sheet-PT-3-2026-27.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-between p-2 rounded bg-blue-50 hover:bg-[#2a3c7e] hover:text-white text-xs text-gray-800 transition-colors"
+                        >
+                          <span className="flex items-center gap-1.5">
+                            {svgIcon(calIcon)}
+                            <span>PT-3 Date Sheet</span>
+                          </span>
+                          <span className="text-[10px] uppercase font-bold text-blue-600">PDF ↗</span>
+                        </a>
+                      </div>
+                    )}
                   </div>
+
                   <div className="p-2.5 bg-gray-100 border border-gray-200 rounded-md flex justify-between items-center text-xs sm:text-sm text-gray-500">
                     <span className="font-medium">Periodic Test 4th</span>
                     <span className="text-[10px] bg-gray-200 px-2 py-0.5 rounded text-gray-600 font-semibold">Coming Soon</span>
