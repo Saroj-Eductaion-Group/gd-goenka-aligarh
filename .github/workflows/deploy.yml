@@ -1,0 +1,43 @@
+name: Auto Deploy to GCP Server
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy via SSH to GCP
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.GCP_VM_IP }}
+          username: ${{ secrets.GCP_USERNAME }}
+          key: ${{ secrets.GCP_SSH_PRIVATE_KEY }}
+          port: 22
+          script_stop: true
+          script: |
+            # Load environment paths (for nvm, node, pm2)
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+            source ~/.profile 2>/dev/null || true
+            source ~/.bashrc 2>/dev/null || true
+
+            echo "=== Navigating to project directory ==="
+            cd /var/www/gd-goenka-aligarh
+
+            echo "=== Pulling latest changes from main branch ==="
+            git fetch origin main
+            git reset --hard origin/main
+            git clean -fd client/build
+
+            echo "=== Building React client application ==="
+            cd client
+            npm run build
+
+            echo "=== Restarting services with pm2 ==="
+            pm2 restart all || sudo pm2 restart all
+            echo "=== Deployment Completed Successfully! ==="
