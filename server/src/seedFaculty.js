@@ -14,7 +14,7 @@ const facultyToUpsert = [
   },
   {
     name: "Ms. Nandani Varshney",
-    image: "https://res.cloudinary.com/dsudqlnml/image/upload/v1795850985/gd-goenka/faculty/NandaniVarshney.jpg",
+    image: "https://res.cloudinary.com/dsudqlnml/image/upload/v1795859451/gd-goenka/faculty/NandaniVarshney_v2.jpg",
   },
   {
     name: "Mrs. Jyoti Baghel",
@@ -30,7 +30,7 @@ const facultyToUpsert = [
   },
   {
     name: "Mrs. Bhuvnesh Pachauri",
-    image: "https://res.cloudinary.com/dsudqlnml/image/upload/v1795850991/gd-goenka/faculty/BhuvneshPachauri.jpg",
+    image: "https://res.cloudinary.com/dsudqlnml/image/upload/v1795859450/gd-goenka/faculty/BhuvneshPachauri_v2.jpg",
   },
   {
     name: "Ms. Mahak Verma",
@@ -44,7 +44,7 @@ const facultyToUpsert = [
     name: "Mr. Shubham T Clancy",
     image: "https://res.cloudinary.com/dsudqlnml/image/upload/v1795859060/gd-goenka/faculty/ShubhamTClancy.jpg",
   },
-  // 5 Restored Faculty
+  // Restored Faculty
   {
     name: "Mr. Komit Ujjwal",
     image: "https://res.cloudinary.com/dsudqlnml/image/upload/v1795858257/gd-goenka/faculty/KomitUjjwal.jpg",
@@ -52,10 +52,6 @@ const facultyToUpsert = [
   {
     name: "Ms. Dipti Verma",
     image: "https://res.cloudinary.com/dsudqlnml/image/upload/v1795858258/gd-goenka/faculty/DiptiVerma.jpg",
-  },
-  {
-    name: "Tanveer Hussain",
-    image: "https://storage.googleapis.com/gd-goenka-school.appspot.com/faculty/1745469396366-WhatsApp Image 2025-04-24 at 8.40.50 AM.jpeg",
   },
   {
     name: "Mrs. Soniya Jain",
