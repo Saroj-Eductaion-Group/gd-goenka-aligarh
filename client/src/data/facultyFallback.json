@@ -12,7 +12,7 @@
     "image": "https://res.cloudinary.com/dsudqlnml/image/upload/v1795850985/gd-goenka/faculty/NandaniVarshney.jpg"
   },
   {
-    "name": "Ms. Jyoti Baghel",
+    "name": "Mrs. Jyoti Baghel",
     "image": "https://res.cloudinary.com/dsudqlnml/image/upload/v1795850986/gd-goenka/faculty/JyotiBaghel.jpg"
   },
   {
@@ -24,7 +24,7 @@
     "image": "https://res.cloudinary.com/dsudqlnml/image/upload/v1795850990/gd-goenka/faculty/RashmiKumari.jpg"
   },
   {
-    "name": "Mr. Bhuvnesh Pachauri",
+    "name": "Mrs. Bhuvnesh Pachauri",
     "image": "https://res.cloudinary.com/dsudqlnml/image/upload/v1795850991/gd-goenka/faculty/BhuvneshPachauri.jpg"
   },
   {
@@ -34,6 +34,10 @@
   {
     "name": "Mr. Paras Kaushik",
     "image": "https://res.cloudinary.com/dsudqlnml/image/upload/v1795850993/gd-goenka/faculty/ParasKaushik.jpg"
+  },
+  {
+    "name": "Mr. Shubham T Clancy",
+    "image": "https://res.cloudinary.com/dsudqlnml/image/upload/v1795859060/gd-goenka/faculty/ShubhamTClancy.jpg"
   },
   {
     "name": "Mr. Komit Ujjwal",

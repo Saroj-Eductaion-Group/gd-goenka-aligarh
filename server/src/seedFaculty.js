@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const Faculty = require("./models/Faculty");
 
 const facultyToUpsert = [
-  // 9 New / Current Faculty
+  // 10 Current / New Faculty
   {
     name: "Mrs. Sapna Chauhan",
     image: "https://res.cloudinary.com/dsudqlnml/image/upload/v1795850989/gd-goenka/faculty/SapnaChauhan.jpg",
@@ -17,7 +17,7 @@ const facultyToUpsert = [
     image: "https://res.cloudinary.com/dsudqlnml/image/upload/v1795850985/gd-goenka/faculty/NandaniVarshney.jpg",
   },
   {
-    name: "Ms. Jyoti Baghel",
+    name: "Mrs. Jyoti Baghel",
     image: "https://res.cloudinary.com/dsudqlnml/image/upload/v1795850986/gd-goenka/faculty/JyotiBaghel.jpg",
   },
   {
@@ -29,7 +29,7 @@ const facultyToUpsert = [
     image: "https://res.cloudinary.com/dsudqlnml/image/upload/v1795850990/gd-goenka/faculty/RashmiKumari.jpg",
   },
   {
-    name: "Mr. Bhuvnesh Pachauri",
+    name: "Mrs. Bhuvnesh Pachauri",
     image: "https://res.cloudinary.com/dsudqlnml/image/upload/v1795850991/gd-goenka/faculty/BhuvneshPachauri.jpg",
   },
   {
@@ -39,6 +39,10 @@ const facultyToUpsert = [
   {
     name: "Mr. Paras Kaushik",
     image: "https://res.cloudinary.com/dsudqlnml/image/upload/v1795850993/gd-goenka/faculty/ParasKaushik.jpg",
+  },
+  {
+    name: "Mr. Shubham T Clancy",
+    image: "https://res.cloudinary.com/dsudqlnml/image/upload/v1795859060/gd-goenka/faculty/ShubhamTClancy.jpg",
   },
   // 5 Restored Faculty
   {
@@ -94,7 +98,7 @@ async function seed() {
       }
     }
 
-    // Remove any old faculty not in the allowed list
+    // Remove any faculty not in the active list
     console.log("Cleaning up old faculty not in the allowed list...");
     const allFaculty = await Faculty.find({});
     for (const doc of allFaculty) {
