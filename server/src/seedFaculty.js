@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 const Faculty = require("./models/Faculty");
 
 const facultyToUpsert = [
-  // Updated existing faculty
   {
     name: "Mrs. Sapna Chauhan",
     image: "https://res.cloudinary.com/dsudqlnml/image/upload/v1795850989/gd-goenka/faculty/SapnaChauhan.jpg",
@@ -12,7 +11,6 @@ const facultyToUpsert = [
     name: "Ms. Divya Chauhan",
     image: "https://res.cloudinary.com/dsudqlnml/image/upload/v1795850988/gd-goenka/faculty/DivyaChauhan.jpg",
   },
-  // New faculty
   {
     name: "Ms. Nandani Varshney",
     image: "https://res.cloudinary.com/dsudqlnml/image/upload/v1795850985/gd-goenka/faculty/NandaniVarshney.jpg",
@@ -54,9 +52,11 @@ async function seed() {
     await mongoose.connect(dbUrl);
     console.log("Connected successfully!");
 
+    const activeNames = [];
     for (const f of facultyToUpsert) {
-      // Find by exact name or regex
-      const cleanName = f.name.replace(/^(Mr\.|Ms\.|Mrs\.)\s*/i, "");
+      const cleanName = f.name.replace(/^(Mr\.|Ms\.|Mrs\.)\s*/i, "").trim();
+      activeNames.push(cleanName.toLowerCase());
+
       const existing = await Faculty.findOne({
         name: { $regex: new RegExp(cleanName, "i") },
       });
@@ -72,8 +72,20 @@ async function seed() {
       }
     }
 
+    // Remove any old faculty that was previously deleted
+    console.log("Cleaning up old deleted faculty...");
+    const allFaculty = await Faculty.find({});
+    for (const doc of allFaculty) {
+      const cleanDocName = doc.name.replace(/^(Mr\.|Ms\.|Mrs\.)\s*/i, "").trim().toLowerCase();
+      const isActive = activeNames.some(active => cleanDocName.includes(active) || active.includes(cleanDocName));
+      if (!isActive) {
+        await Faculty.findByIdAndDelete(doc._id);
+        console.log(`Removed old faculty: ${doc.name} (${doc._id})`);
+      }
+    }
+
     const total = await Faculty.countDocuments();
-    console.log(`Done! Total faculty in database: ${total}`);
+    console.log(`Done! Total active faculty in database: ${total}`);
   } catch (err) {
     console.error("Error seeding faculty:", err);
   } finally {

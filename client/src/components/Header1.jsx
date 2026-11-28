@@ -533,7 +533,7 @@ function Header1() {
                     <li className="menu-item cursor-pointer px-3 py-2 ps-6 hover:bg-[#003963] hover:text-white">NEWSLETTER Volume - I</li>
                   </a>
                   <hr className="my-0" />
-                  <a href="/pdfs/News-Letter-Design-quarter-2nd.pdf#toolbar=0&navpanes=0&scrollbar=0" target="_blank" rel="noopener noreferrer">
+                  <a href="/pdfs/News-Letter-Design-quarter-2nd.pdf?v=web-v2#toolbar=0&navpanes=0&scrollbar=0" target="_blank" rel="noopener noreferrer">
                     <li className="menu-item cursor-pointer px-3 py-2 ps-6 hover:bg-[#003963] hover:text-white">NEWSLETTER Volume - II</li>
                   </a>
                   <hr className="my-0" />
@@ -788,7 +788,7 @@ function Header1() {
                 </a>
                 <hr />
                 <a
-                  href="/pdfs/Newsletter-Volume-II.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                  href="/pdfs/Newsletter-Volume-II.pdf?v=web-v2#toolbar=0&navpanes=0&scrollbar=0"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -1258,7 +1258,7 @@ function Header1() {
                       </li>
                     </a>
                     <a
-                      href="/pdfs/News-Letter-Design-quarter-2nd.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                      href="/pdfs/News-Letter-Design-quarter-2nd.pdf?v=web-v2#toolbar=0&navpanes=0&scrollbar=0"
                       target="_blank"
                       rel="noopener noreferrer"
                     >

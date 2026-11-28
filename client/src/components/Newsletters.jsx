@@ -12,7 +12,7 @@ const examIcon = "M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 
 
 const volumes = [
   { label: 'NEWSLETTER Volume - I', pdf: 'News-Letter-Design-quarter-1st.pdf' },
-  { label: 'NEWSLETTER Volume - II', pdf: 'News-Letter-Design-quarter-2nd.pdf' },
+  { label: 'NEWSLETTER Volume - II', pdf: 'News-Letter-Design-quarter-2nd.pdf?v=web-v2' },
   { label: 'NEWSLETTER Volume - III', pdf: 'News-Letter-Design-quarter-3rd.pdf' },
   { label: 'NEWSLETTER Volume - IV', pdf: 'News-Letter-Design-quarter-4rd.pdf' },
 ];
