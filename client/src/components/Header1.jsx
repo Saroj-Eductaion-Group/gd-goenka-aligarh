@@ -13,6 +13,7 @@ function Header1() {
   const [isSmallSidebar, setIsSmallSidebar] = useState(false);
   const [isSidebar, setIsSidebar] = useState(false);
   const [showVolumes, setShowVolumes] = useState(false);
+  const [showVolumes2026, setShowVolumes2026] = useState(false);
 
   const sideToggle = () => {
     setIsSmallSidebar(!isSmallSidebar);
@@ -547,15 +548,23 @@ function Header1() {
                 </>
               )}
               <hr />
-              <a
-                href="/pdfs/Newsletter-2026-2027.pdf?v=2026-27#toolbar=0&navpanes=0&scrollbar=0"
-                target="_blank"
-                rel="noopener noreferrer"
+              <li
+                className="menu-item cursor-pointer ps-2 px-3 py-2 hover:bg-[#003963] hover:text-white flex justify-between items-center whitespace-nowrap mt-[-16px]"
+                onClick={(e) => { e.stopPropagation(); setShowVolumes2026(!showVolumes2026); }}
               >
-                <li className="menu-item cursor-pointer ps-2 flex mt-[-16px] hover:text-white leading-none">
-                  NEWSLETTER 2026-2027
-                </li>
-              </a>
+                NEWSLETTER 2026-2027 <span>{showVolumes2026 ? "▲" : "▼"}</span>
+              </li>
+              {showVolumes2026 && (
+                <>
+                  <a href="/pdfs/Newsletter-2026-2027.pdf?v=2026-27#toolbar=0&navpanes=0&scrollbar=0" target="_blank" rel="noopener noreferrer">
+                    <li className="menu-item cursor-pointer px-3 py-2 ps-6 hover:bg-[#003963] hover:text-white">NEWSLETTER Volume - I</li>
+                  </a>
+                  <hr className="my-0" />
+                  <a href="/pdfs/News-Letter-Design-quarter-2nd.pdf?v=web-v2#toolbar=0&navpanes=0&scrollbar=0" target="_blank" rel="noopener noreferrer">
+                    <li className="menu-item cursor-pointer px-3 py-2 ps-6 hover:bg-[#003963] hover:text-white">NEWSLETTER Volume - II</li>
+                  </a>
+                </>
+              )}
               <hr />
               <a
                 href="/pdfs/Year-Magazine-2025-26.pdf?v=1#toolbar=0&navpanes=0&scrollbar=0"
@@ -1287,15 +1296,35 @@ function Header1() {
                   </div>
                 )}
                 <hr />
-                <a
-                  href="/pdfs/Newsletter-2026-2027.pdf?v=2026-27#toolbar=0&navpanes=0&scrollbar=0"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <li
+                  className="menu-item cursor-pointer ps-1 leading-none flex justify-between items-center mb-[-4px] uppercase ms-[-4px] text-sm"
+                  onClick={(e) => { e.stopPropagation(); setShowVolumes2026(!showVolumes2026); }}
                 >
-                  <li className="menu-item cursor-pointer ps-1 leading-none flex mb-[-4px] uppercase ms-[-4px]">
-                    NEWSLETTER 2026-2027
-                  </li>
-                </a>
+                  <span>NEWSLETTER 2026-2027</span>
+                  <span>{showVolumes2026 ? "▲" : "▼"}</span>
+                </li>
+                {showVolumes2026 && (
+                  <div className="pl-4 py-1 space-y-1 bg-gray-50 rounded">
+                    <a
+                      href="/pdfs/Newsletter-2026-2027.pdf?v=2026-27#toolbar=0&navpanes=0&scrollbar=0"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <li className="menu-item cursor-pointer ps-2 text-sm uppercase">
+                        NEWSLETTER Volume - I
+                      </li>
+                    </a>
+                    <a
+                      href="/pdfs/News-Letter-Design-quarter-2nd.pdf?v=web-v2#toolbar=0&navpanes=0&scrollbar=0"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <li className="menu-item cursor-pointer ps-2 text-sm uppercase">
+                        NEWSLETTER Volume - II
+                      </li>
+                    </a>
+                  </div>
+                )}
                 <hr />
                 <a
                   href="/pdfs/Year-Magazine-2025-26.pdf?v=1#toolbar=0&navpanes=0&scrollbar=0"

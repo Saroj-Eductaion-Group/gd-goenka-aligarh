@@ -10,15 +10,21 @@ const docIcon = "M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5M3 15h3m3 6l3-3m-3 
 const calIcon = "M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm-3-3h.008v.008H9V12Zm3-3h.008v.008H12V9Zm3 0h.008v.008H15V9Zm-3 6h.008v.008H12V15Zm-3 3h.008v.008H9V18Zm-3 3h.008v.008H6V21Z";
 const examIcon = "M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-5.25 6.557c0 1.272.75 2.378 1.83 2.766";
 
-const volumes = [
+const volumes2025 = [
   { label: 'NEWSLETTER Volume - I', pdf: 'News-Letter-Design-quarter-1st.pdf' },
-  { label: 'NEWSLETTER Volume - II', pdf: 'News-Letter-Design-quarter-2nd.pdf?v=web-v2' },
+  { label: 'NEWSLETTER Volume - II', pdf: 'News-Letter-Design-quarter-2nd.pdf' },
   { label: 'NEWSLETTER Volume - III', pdf: 'News-Letter-Design-quarter-3rd.pdf' },
   { label: 'NEWSLETTER Volume - IV', pdf: 'News-Letter-Design-quarter-4rd.pdf' },
 ];
 
+const volumes2026 = [
+  { label: 'NEWSLETTER Volume - I', pdf: 'Newsletter-2026-2027.pdf?v=2026-27' },
+  { label: 'NEWSLETTER Volume - II (Quarter 2nd)', pdf: 'News-Letter-Design-quarter-2nd.pdf?v=web-v2' },
+];
+
 const Newsletters = () => {
   const [showVolumes, setShowVolumes] = useState(false);
+  const [showVolumes2026, setShowVolumes2026] = useState(true);
   const [showExam, setShowExam] = useState(false);
   const [selectedTerm, setSelectedTerm] = useState('term2');
   const [openPT, setOpenPT] = useState({ pt1: false, pt2: false, term1: false, pt3: true });
@@ -289,7 +295,7 @@ const Newsletters = () => {
           </div>
           {showVolumes && (
             <ul className="mt-2 space-y-2 pl-2">
-              {volumes.map((item) => (
+              {volumes2025.map((item) => (
                 <li key={item.label} className="list-none">
                   <a href={`/pdfs/${item.pdf}#toolbar=0&navpanes=0&scrollbar=0`} target="_blank" rel="noopener noreferrer"
                     className="block p-2 rounded-lg bg-blue-700 text-white hover:bg-blue-900 transition-colors duration-200">
@@ -306,13 +312,31 @@ const Newsletters = () => {
 
         {/* 5. Newsletter 2026-2027 */}
         <li className="list-none">
-          <a href="/pdfs/Newsletter-2026-2027.pdf?v=2026-27#toolbar=0&navpanes=0&scrollbar=0" target="_blank" rel="noopener noreferrer"
-            className="block p-3 rounded-lg bg-[#2a3c7e] text-white hover:bg-blue-800 transition-colors duration-200">
-            <div className="flex items-center space-x-2">
-              {svgIcon(docIcon)}
-              <span>NEWSLETTER 2026-2027</span>
+          <div onClick={() => setShowVolumes2026(!showVolumes2026)}
+            className="block p-3 rounded-lg bg-[#2a3c7e] text-white hover:bg-blue-800 transition-colors duration-200 cursor-pointer">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-2">
+                {svgIcon(docIcon)}
+                <span>NEWSLETTER 2026-2027</span>
+              </div>
+              <span>{showVolumes2026 ? '▲' : '▼'}</span>
             </div>
-          </a>
+          </div>
+          {showVolumes2026 && (
+            <ul className="mt-2 space-y-2 pl-2">
+              {volumes2026.map((item) => (
+                <li key={item.label} className="list-none">
+                  <a href={`/pdfs/${item.pdf}#toolbar=0&navpanes=0&scrollbar=0`} target="_blank" rel="noopener noreferrer"
+                    className="block p-2 rounded-lg bg-blue-700 text-white hover:bg-blue-900 transition-colors duration-200">
+                    <div className="flex items-center space-x-2">
+                      {svgIcon(docIcon)}
+                      <span>{item.label}</span>
+                    </div>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
         </li>
 
         {/* 6. School Year Magazine */}
