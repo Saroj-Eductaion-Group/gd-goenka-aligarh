@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const Faculty = require("./models/Faculty");
 
 const facultyToUpsert = [
+  // 9 New / Current Faculty
   {
     name: "Mrs. Sapna Chauhan",
     image: "https://res.cloudinary.com/dsudqlnml/image/upload/v1795850989/gd-goenka/faculty/SapnaChauhan.jpg",
@@ -39,6 +40,27 @@ const facultyToUpsert = [
     name: "Mr. Paras Kaushik",
     image: "https://res.cloudinary.com/dsudqlnml/image/upload/v1795850993/gd-goenka/faculty/ParasKaushik.jpg",
   },
+  // 5 Restored Faculty
+  {
+    name: "Mr. Komit Ujjwal",
+    image: "https://res.cloudinary.com/dsudqlnml/image/upload/v1795858257/gd-goenka/faculty/KomitUjjwal.jpg",
+  },
+  {
+    name: "Ms. Dipti Verma",
+    image: "https://res.cloudinary.com/dsudqlnml/image/upload/v1795858258/gd-goenka/faculty/DiptiVerma.jpg",
+  },
+  {
+    name: "Tanveer Hussain",
+    image: "https://storage.googleapis.com/gd-goenka-school.appspot.com/faculty/1745469396366-WhatsApp Image 2025-04-24 at 8.40.50 AM.jpeg",
+  },
+  {
+    name: "Mrs. Soniya Jain",
+    image: "https://storage.googleapis.com/gd-goenka-school.appspot.com/faculty/1743241511924-WhatsApp Image 2025-03-29 at 3.08.03 PM.jpeg",
+  },
+  {
+    name: "Ms. Nancy Maheshwari",
+    image: "https://storage.googleapis.com/gd-goenka-school.appspot.com/faculty/1743241424876-WhatsApp Image 2025-03-29 at 3.08.01 PM.jpeg",
+  },
 ];
 
 async function seed() {
@@ -72,8 +94,8 @@ async function seed() {
       }
     }
 
-    // Remove any old faculty that was previously deleted
-    console.log("Cleaning up old deleted faculty...");
+    // Remove any old faculty not in the allowed list
+    console.log("Cleaning up old faculty not in the allowed list...");
     const allFaculty = await Faculty.find({});
     for (const doc of allFaculty) {
       const cleanDocName = doc.name.replace(/^(Mr\.|Ms\.|Mrs\.)\s*/i, "").trim().toLowerCase();
