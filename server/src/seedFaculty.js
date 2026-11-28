@@ -14,7 +14,7 @@ const facultyToUpsert = [
   },
   {
     name: "Ms. Nandani Varshney",
-    image: "https://res.cloudinary.com/dsudqlnml/image/upload/v1795859451/gd-goenka/faculty/NandaniVarshney_v2.jpg",
+    image: "https://res.cloudinary.com/dsudqlnml/image/upload/v1795861114/gd-goenka/faculty/NandaniVarshney_v3.jpg",
   },
   {
     name: "Mrs. Jyoti Baghel",
@@ -30,7 +30,7 @@ const facultyToUpsert = [
   },
   {
     name: "Mrs. Bhuvnesh Pachauri",
-    image: "https://res.cloudinary.com/dsudqlnml/image/upload/v1795859450/gd-goenka/faculty/BhuvneshPachauri_v2.jpg",
+    image: "https://res.cloudinary.com/dsudqlnml/image/upload/v1795861112/gd-goenka/faculty/BhuvneshPachauri_v3.jpg",
   },
   {
     name: "Ms. Mahak Verma",
@@ -42,7 +42,7 @@ const facultyToUpsert = [
   },
   {
     name: "Mr. Shubham T Clancy",
-    image: "https://res.cloudinary.com/dsudqlnml/image/upload/v1795859060/gd-goenka/faculty/ShubhamTClancy.jpg",
+    image: "https://res.cloudinary.com/dsudqlnml/image/upload/v1795861113/gd-goenka/faculty/ShubhamTClancy_v3.jpg",
   },
   // Restored Faculty
   {
