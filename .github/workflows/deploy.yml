@@ -34,8 +34,13 @@ jobs:
             git reset --hard origin/main
             git clean -fd client/build
 
+            echo "=== Updating server dependencies and seeding database ==="
+            cd /var/www/gd-goenka-aligarh/server
+            npm install --production=false
+            node src/seedFaculty.js || true
+
             echo "=== Building React client application ==="
-            cd client
+            cd /var/www/gd-goenka-aligarh/client
             npm run build
 
             echo "=== Restarting services with pm2 ==="

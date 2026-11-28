@@ -5,18 +5,21 @@ import JobBanner from "../assets/JobBanner.jpeg";
 import axios from 'axios';
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
+import fallbackFaculty from "../data/facultyFallback.json";
 
 export default function FacultyPage() {
     document.title = "Our Faculty - GDGPS Aligarh";
-    const [facultyData, setFacultyData] = useState([]);
+    const [facultyData, setFacultyData] = useState(fallbackFaculty || []);
     
-    const apiUrl = process.env.REACT_APP_BASE_URL;
+    const apiUrl = process.env.REACT_APP_BASE_URL || "";
 
     const fetchFacultyData = async () => {
         try {
             const response = await axios.get(`${apiUrl}/api/v1/faculty`);
-            const result = response?.data?.data
-            setFacultyData(result);
+            const result = response?.data?.data;
+            if (result && result.length > 0) {
+                setFacultyData(result);
+            }
         } catch (error) {
             console.error("Error fetching faculty data:", error);
         }

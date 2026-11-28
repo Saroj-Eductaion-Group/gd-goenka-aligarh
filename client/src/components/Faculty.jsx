@@ -1,15 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import KomitUjjwal from "../assets/KomitUjjwal.jpeg";
-import DivyaChauhan from "../assets/DivyaChauhan.jpeg";
-import DiptiVerma from "../assets/DiptiVerma.jpeg";
-import Ruby from "../assets/KumariRuby.jpeg";
-
-
-
+import axios from 'axios';
 import { motion } from "framer-motion";
 import { NavLink } from 'react-router-dom';
+import fallbackFaculty from "../data/facultyFallback.json";
 
 const responsive = {
   superLargeDesktop: { breakpoint: { max: 4000, min: 1536 }, items: 4 },
@@ -18,26 +13,25 @@ const responsive = {
   mobile: { breakpoint: { max: 640, min: 0 }, items: 1 },
 };
 
-const facultyData = [
-  {
-    name: "Ms. Kumari Ruby",
-    image: Ruby
-  },
-  {
-    name: "Mr. Komit Ujjwal",
-    image: KomitUjjwal
-  },
-  {
-    name: "Ms. Divya Chauhan",
-    image: DivyaChauhan
-  },
-  {
-    name: "Ms. Dipti Verma",
-    image: DiptiVerma
-  },
-];
-
 function Faculty() {
+  const [facultyList, setFacultyList] = useState(fallbackFaculty || []);
+  const apiUrl = process.env.REACT_APP_BASE_URL || "";
+
+  useEffect(() => {
+    const fetchFaculty = async () => {
+      try {
+        const response = await axios.get(`${apiUrl}/api/v1/faculty`);
+        const result = response?.data?.data;
+        if (result && result.length > 0) {
+          setFacultyList(result);
+        }
+      } catch (err) {
+        // fallbackFaculty is already set
+      }
+    };
+    fetchFaculty();
+  }, [apiUrl]);
+
   return (
     <section className="py-12 px-4 w-full bg-white">
       <div className="mx-auto max-w-7xl">
@@ -77,7 +71,7 @@ function Faculty() {
             itemClass="px-2"
             className="z-20"
           >
-            {facultyData.map((faculty, index) => (
+            {facultyList.map((faculty, index) => (
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.03 }}

@@ -12,7 +12,7 @@ const { uploadFile } = require("../utils/storage");
 
 const createFaculty = async (req, res) => {
   const { name } = req.body;
-  const imageUrl = req.fileUrl; // Using Cloud Storage URL from middleware
+  const imageUrl = req.fileUrl || req.body.image; // Using Cloud Storage URL from middleware or body
 
   if (!name || !imageUrl) {
     return sendResponse(res, 400, false, "Faculty name and image are required");
@@ -114,10 +114,12 @@ const updateFaculty = async (req, res) => {
       return sendResponse(res, 404, false, "No record found");
     }
 
-    let updatedObj = { name };
+    let updatedObj = {};
+    if (name) updatedObj.name = name;
 
-    if (req.fileUrl) {
-      updatedObj.image = req.fileUrl;
+    const imageUrl = req.fileUrl || req.body.image;
+    if (imageUrl) {
+      updatedObj.image = imageUrl;
     }
 
     const updatedFaculty = await updateRecord(Faculty, { _id: id }, updatedObj);

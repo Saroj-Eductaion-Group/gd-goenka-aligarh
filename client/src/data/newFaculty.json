@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Ms. Nandani Varshney",
+    "image": "https://res.cloudinary.com/dsudqlnml/image/upload/v1795850985/gd-goenka/faculty/NandaniVarshney.jpg",
+    "id": null
+  },
+  {
+    "name": "Ms. Jyoti Baghel",
+    "image": "https://res.cloudinary.com/dsudqlnml/image/upload/v1795850986/gd-goenka/faculty/JyotiBaghel.jpg",
+    "id": null
+  },
+  {
+    "name": "Ms. Divya Sharma",
+    "image": "https://res.cloudinary.com/dsudqlnml/image/upload/v1795850987/gd-goenka/faculty/DivyaSharma.jpg",
+    "id": null
+  },
+  {
+    "name": "Ms. Divya Chauhan",
+    "image": "https://res.cloudinary.com/dsudqlnml/image/upload/v1795850988/gd-goenka/faculty/DivyaChauhan.jpg",
+    "id": "67e7c1a9a75a10704b2806e6"
+  },
+  {
+    "name": "Mrs. Sapna Chauhan",
+    "image": "https://res.cloudinary.com/dsudqlnml/image/upload/v1795850989/gd-goenka/faculty/SapnaChauhan.jpg",
+    "id": "67e7c0b6a75a10704b2806d1"
+  },
+  {
+    "name": "Ms. Rashmi Kumari",
+    "image": "https://res.cloudinary.com/dsudqlnml/image/upload/v1795850990/gd-goenka/faculty/RashmiKumari.jpg",
+    "id": null
+  },
+  {
+    "name": "Mr. Bhuvnesh Pachauri",
+    "image": "https://res.cloudinary.com/dsudqlnml/image/upload/v1795850991/gd-goenka/faculty/BhuvneshPachauri.jpg",
+    "id": null
+  },
+  {
+    "name": "Ms. Mahak Verma",
+    "image": "https://res.cloudinary.com/dsudqlnml/image/upload/v1795850992/gd-goenka/faculty/MahakVerma.jpg",
+    "id": null
+  },
+  {
+    "name": "Mr. Paras Kaushik",
+    "image": "https://res.cloudinary.com/dsudqlnml/image/upload/v1795850993/gd-goenka/faculty/ParasKaushik.jpg",
+    "id": null
+  }
+]
